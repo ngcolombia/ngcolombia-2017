@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+@import 'palette';
+@include mat-core();
+$primary: mat-palette($md-ngcolombia);
+$accent:  mat-palette($md-ngcolombiasec);
+$warn:  mat-palette($mat-red, 600, 100, 800);
+$brainshark-app-theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($brainshark-app-theme);
