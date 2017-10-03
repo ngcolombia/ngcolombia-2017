@@ -1,0 +1,119 @@
+.cards-list {
+    margin: auto;
+    padding: 0 5px;
+    @media (min-width: 768px){
+        width: 750px;
+    }
+    @media (min-width: 980px){
+        width: 970px;
+    }
+    @media (min-width: 1200px){
+        width: 1170px;
+    }
+}
+
+.cards-item {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    @media (min-width: 768px){
+        float: left;
+        width: 50%;
+        padding: 15px;
+    }
+    @media (min-width: 980px){
+        width: 25%;
+        padding: 10px;
+    }
+}
+
+.cards-item img {
+    display: block;
+    width: 100%;
+}
+
+.cards-item div {
+    background-color: white;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 7px 7px 0 0;
+}
+
+.cards-item .cards-image {
+    position: relative;
+}
+
+.cards-item .cards-info {
+    padding: 10px 20px;
+    border-radius: 0 0 7px 7px;
+    color: #303030;
+    min-height: 85px;
+    cursor: pointer;
+    &:hover {
+        background-color: #DDD;
+    }
+}
+
+.cards-name {
+    color: #ee163a;
+    font-size: 18px;
+    margin: 0 0 3px 0;
+}
+
+.cards-caption {
+    font-size: 16px;
+    margin: 0;
+}
+
+.cards-item:hover .cards-social-links,
+.cards-item:hover .cards-image:before  {
+    opacity: 1;
+}
+
+.cards-social-links {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    top: 50%;
+    left: 50%;
+    margin-left: -48px;
+    margin-top: -48px;
+    transition: opacity 0.4s ease-out;
+    opacity: 0;
+}
+
+.cards-item .cards-image:before {
+    content: '';
+    position: absolute;
+    transition: opacity 0.4s ease-out;
+    background: rgba(41, 41, 41, .8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.cards-social-links li {
+    float: left;
+}
+
+.cards-social-links i {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-color: red;
+    &.fa-linkedin {
+        background-color: #0077b5;
+    }
+    &.fa-facebook {
+        background-color: #496daf;
+    }
+    &.fa-twitter {
+        background-color: #64acf1;
+    }
+    &:hover {
+        background-color: #000;
+    }
+}
