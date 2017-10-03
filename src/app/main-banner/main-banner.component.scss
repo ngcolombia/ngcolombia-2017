@@ -1,6 +1,19 @@
 .banner-container{
 	height: 100vh;
 	color: white;
-	background: url(/assets/img/pattern2.png);
-	background-repeat: repeat-x repeat-y;
+}
+
+.banner-title{
+    font-size: 66px;
+    line-height: 78px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.banner-desc{
+	font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: normal;
 }

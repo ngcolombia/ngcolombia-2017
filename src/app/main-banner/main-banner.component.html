@@ -1,7 +1,7 @@
-<div class="banner-container" fxLayout="column" fxLayoutAlign="center center">
-	<app-countdown></app-countdown>
-	<h1>NG Colombia</h1>
-	<h2>Nov 18th: 8:00 am</h2>
+<div class="banner-container bg-pattern" fxLayout="column" fxLayoutAlign="center center">
+	<app-countdown [targetDate]="targetDate" currentDayMessage="The event has started!"></app-countdown>
+	<h1 class="banner-title">NG Colombia</h1>
+	<h2 class="banner-desc">Medellín, Nov 18th: 8:00 am, 2017</h2>
 	<div class="actions">
 		<a md-button color="primary" href="#newsletter">Be the first to know!</a>
 	</div>
