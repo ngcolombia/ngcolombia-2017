@@ -4,20 +4,30 @@ body{
 	margin: 0px;
 }
 
+body, p {
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased !important;
+    line-height: 24px;
+	font-size: 14px;
+	margin: 0 0 10px;
+}
+
 .h1, .h2, .h3, h1, h2, h3 {
     margin-top: 20px;
 	margin-bottom: 10px;
+	font-family: Lato;
 }
 
-section{
+section, footer {
 	padding: 80px 0;
     position: relative;
 }
-.slide{
+.slide {
 	padding: 0px;
 }
 
-.section-title{
+.section-title {
 	font-size: 36px;
     line-height: 36px;
     margin-top: 0;
@@ -27,7 +37,7 @@ section{
 	text-align: center;
 }
 
-.section-sub-title{
+.section-sub-title {
 	display: block;
     max-width: 80%;
     font-size: 18px;
@@ -35,7 +45,12 @@ section{
 	text-align: center;
 }
 
-#speakers{
+h3 {
+	font-size: 20px;
+    margin: 0 0 15px;
+    line-height: 22px;
+}
+#speakers {
 	color: #ffffff;
     background-color: #1c1c1c;
     background-image: url(/assets/img/parallax2.jpg);
@@ -47,11 +62,53 @@ section{
 	color: white;
 }
 
-.container{
+.container {
 	z-index: 1;
 }
 
-.bg-pattern{
+.bg-pattern {
 	background: url(/assets/img/pattern2.png);
 	background-repeat: repeat-x repeat-y;
+	color: #ffffff;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media (min-width: 768px) {
+    .container {
+        width:750px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width:970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width:1170px
+    }
+}
+
+blockquote {
+	padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 24px;
+    border-left: 3px solid #ee163a;
+    font-style: italic;
+    font-family: Lato;
+}
+
+.img-responsive {
+	display: block;
+    max-width: 100%;
+    height: auto;
 }

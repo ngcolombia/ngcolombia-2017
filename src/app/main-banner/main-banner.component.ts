@@ -9,7 +9,7 @@ export class MainBannerComponent {
 	targetDate: Date;
 
 	constructor() {
-		this.targetDate = new Date(2017, 11, 18, 8, 0, 0);
+		this.targetDate = new Date(2017, 10, 18, 8, 0, 0);
 	}
 
 }

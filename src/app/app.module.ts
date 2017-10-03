@@ -15,6 +15,7 @@ import { MainBannerComponent } from './main-banner/main-banner.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { TimeBoxComponent } from './countdown/time-box/time-box.component';
 import { SpeakerDetailComponent } from './speakers/speaker-detail/speaker-detail.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,8 @@ import { SpeakerDetailComponent } from './speakers/speaker-detail/speaker-detail
 		MainBannerComponent,
 		MainPageComponent,
 		TimeBoxComponent,
-		SpeakerDetailComponent
+		SpeakerDetailComponent,
+		FooterComponent
 	],
 	imports: [
 		MdButtonModule,
