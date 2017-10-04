@@ -1,0 +1,56 @@
+.section-title{
+	margin-bottom: 40px;
+}
+
+.subscribe-form {
+	margin-bottom: 15px;
+	position: relative;
+	max-width: 650px;
+    margin: 0 auto;    
+
+	* {
+		box-sizing: border-box;
+	}
+
+	input.email{
+		width: 100%;
+		display: inline-block;
+		font-size: 12px;
+		text-transform: capitalize;
+		height: 50px;
+		background: #000;
+		background: rgba(0,0,0,.35);
+		border: 1px solid #1d1c1c;
+		border-radius: 25px 0 0 25px;
+		padding: 5px 20px;
+		color: #959595;
+		line-height: 1.42857143;
+		transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		margin-left: -25px;
+
+		&:focus {
+			box-shadow: none;
+			border: 1px solid #ee163a;
+			outline: 0px;
+		}
+	}
+
+	.button {
+		position: absolute;
+		top: 0;
+		right: -50px;
+		border-radius: 0 25px 25px 0 !important;
+		height: 50px;
+		border: 0 !important;
+		padding-left: 50px;
+		padding-right: 50px;
+		text-transform: uppercase;
+	}
+}
+@media (max-width: 767px){
+	.subscribe-form {
+		z-index: 1;
+		position: relative;
+		max-width: 310px;
+	}
+}

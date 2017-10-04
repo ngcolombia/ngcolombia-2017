@@ -1,7 +1,3 @@
-.time-box{
-	margin:0 30px;
-}
-
 .days{
 	color: #ee163a;
 }
@@ -16,4 +12,13 @@
 
 .seconds{
 	color: #8BC34A;
+}
+
+.countdown-container {
+	 width: 80%;
+	 margin: auto;
+}
+
+@media (max-width: 767px){
+	width: 100%;
 }

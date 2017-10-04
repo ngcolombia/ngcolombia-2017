@@ -2,7 +2,7 @@ import { SpeakerService } from './speakers/speaker.service';
 import { CountdownService } from './countdown/countdown.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MdButtonModule, MdDialogModule } from '@angular/material';
+import { MdButtonModule, MdDialogModule, MatTabsModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -33,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
 	imports: [
 		MdButtonModule,
 		MdDialogModule,
+		MatTabsModule,
 		FlexLayoutModule,
 		BrowserAnimationsModule,
 		BrowserModule

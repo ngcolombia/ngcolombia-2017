@@ -7,3 +7,12 @@ $warn:  mat-palette($mat-red, 600, 100, 800);
 $brainshark-app-theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($brainshark-app-theme);
+
+.mat-raised-button, {
+	border-radius: 25px !important;
+	padding: 6px 30px !important;
+}
+
+strong{
+	color: map-get($primary, 900);
+}
