@@ -9,3 +9,11 @@
 .tab-content{
 	margin-top: 20px;
 }
+
+.tab-buttons {
+	text-align: center;
+	
+	> a {
+		margin-bottom: 10px;
+	}
+}

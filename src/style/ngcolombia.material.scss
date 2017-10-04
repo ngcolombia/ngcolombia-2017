@@ -16,3 +16,9 @@ $brainshark-app-theme: mat-light-theme($primary, $accent, $warn);
 strong{
 	color: map-get($primary, 900);
 }
+
+app-about-us .information-container{
+	.mat-tab-header{
+		display: none;
+	}
+}

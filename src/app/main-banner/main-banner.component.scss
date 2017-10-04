@@ -4,7 +4,9 @@
 	background-image: url(/assets/img/bg1.jpg);
 	background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+	background-size: cover;
+	padding: 150px 0px;
+	padding-bottom: 50px;
 }
 
 .banner-title{
@@ -23,7 +25,17 @@
 	line-height: normal;
 	text-align: center;
 }
+
+.actions{
+	margin-top: 100px;
+	text-align: center;
+}
+
 @media (max-width: 767px){
+	.banner-container{
+		padding: 150px 0px;
+		padding-bottom: 50px;
+	}
 	.banner-title{
 		font-size: 36px;
 		line-height: 48px;
@@ -31,8 +43,8 @@
 	.banner-desc{
 		font-size: 18px;
 	}
-}
-.actions{
-	margin-top: 100px;
-	text-align: center;
+	.actions{
+		margin-top: 50px;
+		text-align: center;
+	}
 }

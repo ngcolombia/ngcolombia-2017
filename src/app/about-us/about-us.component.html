@@ -1,37 +1,52 @@
 <div class="container">
 	<h2 class="section-title">What is NgColombia ?</h2>
-	<div class="about-us-content" fxLayout="row" fxLayout.xs="column">
+	<div class="about-us-content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
 		<div class="img-main" fxFlex="50%">
 			<img src="./assets/img/angular.png" alt="" class="img-responsive">
 		</div>
-		<md-tab-group  class="tabs-container" fxFlex="50%">
-			<md-tab label="The Conference">
-				<div class="tab-content">
-					<p>
-						NgColombia 2017 is Colombia’s first Angular international conference. Held in Medellín, it gathers people from different parts of world to bring you an out-of-this-world experience. In this full-day we will dive into exciting topics such as RxJS, Angular CLI, TypeScript, AOT, Animations and much more!
-					</p>
-					<p>
-						NgColombia is split in two sections: in the morning we will have a set of 3 concurrent workshops and in the afternoon the main track with our keynotes. The talks and workshops will be mostly about Angular, with the primary focus on Angular 2 and later.	
-					</p>
-				</div>
-			</md-tab>
-			<md-tab label="The Workshops">
-				<div class="tab-content">
-					<p>
-						We know how important it is for you to have a real hands-on experience when you are learning Angular. That’s why we are bringing <strong>world top professionals</strong> with premium workshops just for you. During these sessions you will go through deep technical concepts and specialized content that will make you a real Angular Rockstar!					
-					</p>
-				</div>
-			</md-tab>
-			<md-tab label="Food & Fun">
-				<div class="tab-content">
-					<p>
-						NgColombia is brought to you from another universe, one where food is delicious, coffee is awesome and having fun is the only rule. NgColombia has a lot, A LOT, of surprises for you. 					
-					</p>
-					<p>
-						Get ready, because this is about to start!
-					</p>
-				</div>
-			</md-tab>
-		</md-tab-group>
+		<div class="information-container" fxLayout="column" fxFlex="50%">
+			<div class="tab-buttons">
+				<a md-raised-button [color]="conferenceButtonColor" (click)="showConferenceTab()" >The Conference</a>
+				<a md-raised-button [color]="workshopsButtonColor" (click)="showWorkshopsTab()">The Workshops</a>
+				<a md-raised-button [color]="foodButtonColor" (click)="showFoodTab()">Food & Fun</a>
+			</div>
+			<md-tab-group class="tabs-container" [(selectedIndex)]="selectedTab">
+				<md-tab label="The Conference">
+					<div class="tab-content">
+						<p>
+							NgColombia 2017 is Colombia’s first Angular international conference. Held in Medellín, it gathers people from different
+							parts of world to bring you an out-of-this-world experience. In this full-day we will dive into exciting topics such
+							as RxJS, Angular CLI, TypeScript, AOT, Animations and much more!
+						</p>
+						<p>
+							NgColombia is split in two sections: in the morning we will have a set of 3 concurrent workshops and in the afternoon the
+							main track with our keynotes. The talks and workshops will be mostly about Angular, with the primary focus on Angular
+							2 and later.
+						</p>
+					</div>
+				</md-tab>
+				<md-tab label="The Workshops">
+					<div class="tab-content">
+						<p>
+							We know how important it is for you to have a real hands-on experience when you are learning Angular. That’s why we are bringing
+							<strong>world top professionals</strong> with premium workshops just for you. During these sessions you will
+							go through deep technical concepts and specialized content that will make you a real Angular Rockstar!
+						</p>
+					</div>
+				</md-tab>
+				<md-tab label="Food & Fun">
+					<div class="tab-content">
+						<p>
+							NgColombia is brought to you from another universe, one where food is delicious, coffee is awesome and having fun is the
+							only rule. NgColombia has a lot, A LOT, of surprises for you.
+						</p>
+						<p>
+							Get ready, because this is about to start!
+						</p>
+					</div>
+				</md-tab>
+			</md-tab-group>
+		</div>
+
 	</div>
 </div>
