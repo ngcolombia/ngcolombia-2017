@@ -1,0 +1,35 @@
+footer {
+    position: relative;
+}
+
+#fss-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-menu ul {
+    text-align: center;
+    li {
+        display: inline-block;
+        line-height: 12px;
+        a {
+            background: none;
+            color: #AAA;
+            padding: 0 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-right: 1px solid #999;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
