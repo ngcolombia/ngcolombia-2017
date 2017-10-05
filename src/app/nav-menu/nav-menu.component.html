@@ -1,9 +1,9 @@
 <nav class="nav-menu">
 	<ul class="menu-items-container">
-		<li class="menu-item"><a md-button color="primary" (click)="select()" href="./#">HOME</a></li>
-		<li class="menu-item"><a md-button color="primary" (click)="select()" href="./#speakers">SPEAKERS</a></li>
-		<li class="menu-item"><a md-button color="primary" (click)="select()" href="./#intro">ABOUT</a></li>
-		<li class="menu-item" *ngIf="!showPrimaryButton"><a md-button color="primary" (click)="select()" href="./#newsletter">SUBSCRIBE</a></li>
-		<li class="menu-item" *ngIf="showPrimaryButton"><a md-raised-button color="primary" (click)="select()" href="./#newsletter" class="menu-main-action">SUBSCRIBE</a></li>
+		<li class="menu-item"><a md-button color="primary" (click)="select()" appSmoothScroll navigateToElement="banner" href="./#banner">HOME</a></li>
+		<li class="menu-item"><a md-button color="primary" (click)="select()" appSmoothScroll navigateToElement="speakers" href="./#speakers">SPEAKERS</a></li>
+		<li class="menu-item"><a md-button color="primary" (click)="select()" appSmoothScroll navigateToElement="intro" href="./#info">ABOUT</a></li>
+		<li class="menu-item" *ngIf="!showPrimaryButton"><a md-button color="primary" (click)="select()" appSmoothScroll navigateToElement="newsletter" href="./#newsletter">SUBSCRIBE</a></li>
+		<li class="menu-item" *ngIf="showPrimaryButton"><a md-raised-button color="primary" (click)="select()"  appSmoothScroll navigateToElement="newsletter" class="menu-main-action" href="./#newsletter">SUBSCRIBE</a></li>
 	</ul>
 </nav>

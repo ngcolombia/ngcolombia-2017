@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { LogoComponent } from './logo/logo.component';
+import { SmoothScrollDirective } from './smooth-scroll/smooth-scroll.directive';
 
 @NgModule({
 	declarations: [
@@ -34,7 +35,8 @@ import { LogoComponent } from './logo/logo.component';
 		FooterComponent,
 		HeaderComponent,
 		NavMenuComponent,
-		LogoComponent
+		LogoComponent,
+		SmoothScrollDirective
 	],
 	imports: [
 		MdButtonModule,
