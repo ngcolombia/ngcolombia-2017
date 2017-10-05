@@ -1,0 +1,30 @@
+.img-container {
+    @media (min-width: 320px) {
+        display: none
+    }
+    @media (min-width: 992px) {
+        display: grid
+    }
+    @media (min-width: 1200px) {
+        display: grid
+    }
+}
+
+.speaker-content{
+    margin: 30px 50px 0;
+
+    .mat-dialog-title{
+        color: #7d1a65;
+    }
+}
+
+md-dialog-content{
+    display: flex;
+    margin: 0;
+}
+
+.mat-dialog-content{
+    padding: 0 0;
+}
+
+
