@@ -17,6 +17,7 @@
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 20px;
+    cursor: pointer;
     @media (min-width: 768px){
         float: left;
         width: 50%;
@@ -48,15 +49,12 @@
     padding: 10px 20px;
     border-radius: 0 0 7px 7px;
     color: #303030;
-    min-height: 85px;
-    cursor: pointer;
-    &:hover {
-        background-color: #DDD;
-    }
+    min-height: 100px;
+    transition: all 0.3s ease-out;
 }
 
 .cards-name {
-    color: #ee163a;
+    color: #7d1a65;
     font-size: 18px;
     margin: 0 0 3px 0;
 }
@@ -66,9 +64,13 @@
     margin: 0;
 }
 
-.cards-item:hover .cards-social-links,
-.cards-item:hover .cards-image:before  {
-    opacity: 1;
+.cards-item:hover {
+    .cards-image:before  {
+        opacity: 1;
+    }
+    .cards-info {
+        background-color: #ffdff7;
+    }
 }
 
 .cards-social-links {
@@ -79,15 +81,17 @@
     left: 50%;
     margin-left: -48px;
     margin-top: -48px;
-    transition: opacity 0.4s ease-out;
+    transition: opacity 0.3s ease-out;
     opacity: 0;
 }
 
 .cards-item .cards-image:before {
     content: '';
     position: absolute;
-    transition: opacity 0.4s ease-out;
-    background: rgba(41, 41, 41, .8);
+    transition: opacity 0.3s ease-out;
+    background: rgba(91, 18, 73, 1);
+    mix-blend-mode: color;
+    border-radius: 5px 5px 0 0;
     top: 0;
     left: 0;
     right: 0;

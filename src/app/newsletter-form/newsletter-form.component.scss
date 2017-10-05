@@ -18,8 +18,8 @@
 		font-size: 12px;
 		height: 50px;
 		background: #000;
-		background: rgba(0,0,0,.35);
-		border: 1px solid #1d1c1c;
+		background: rgba(255,255,255,.35);
+		border: 1px solid #264f5c;
 		border-radius: 25px 0 0 25px;
 		padding: 5px 20px;
 		color: #959595;
@@ -29,9 +29,29 @@
 
 		&:focus {
 			box-shadow: none;
-			border: 1px solid #ee163a;
+			border: 1px solid #5b1249;
 			outline: 0px;
 		}
+		[placeholder] {
+			color: white !important;
+		}
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: rgba(255,255,255,.8);
+	font-size: 14px;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	color: rgba(255,255,255,.8);
+	font-size: 14px;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	color: rgba(255,255,255,.8);
+	font-size: 14px;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	color: rgba(255,255,255,.8);
+	font-size: 14px;
 	}
 
 	.button {
@@ -54,4 +74,17 @@
 		max-width: 310px;
 		margin:0px 55px;
 	}
+}
+
+#fss-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.subscribe-content {
+    position: relative;
+    z-index: 1;
 }

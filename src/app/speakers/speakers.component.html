@@ -1,19 +1,13 @@
 <h2 class="section-title title-white">Event Speakers</h2>
 <p class="section-sub-title">Listen, Learn, Get inspired.</p>
 <ul class="cards-list">
-	<li class="cards-item" *ngFor="let speaker of speakers">
+	<li class="cards-item" *ngFor="let speaker of speakers" (click)="showSpeakerDetail(speaker)">
 		<div class="cards-image">
 			<img src="{{speaker.picture}}" alt="{{speaker.name}}">
-			<ul class="cards-social-links">
-				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			</ul>
 		</div>
-		<div class="cards-info" (click)="showSpeakerDetail(speaker)">
+		<div class="cards-info">
 			<h3 class="cards-name">{{speaker.name}}</h3>
-			<p class="cards-caption">CEO, HughWoods</p>
+			<p class="cards-caption">{{speaker.designation}}</p>
 		</div>
 	</li>
 </ul>

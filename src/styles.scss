@@ -140,3 +140,9 @@ blockquote {
     max-width: 100%;
     height: auto;
 }
+
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    background-color: #5b1249;
+}

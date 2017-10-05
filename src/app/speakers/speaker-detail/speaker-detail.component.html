@@ -1,4 +1,9 @@
 <h1 md-dialog-title>{{speaker.name}}</h1>
 <md-dialog-content>
-  <p>{{speaker.bio}}</p>
+  <p [innerHTML]="speaker.bio"></p>
+  <ul>
+    <li *ngIf="speaker.social.twitter">
+      <a href="https://twitter.com/{{speaker.social.twitter}}">@{{speaker.social.twitter}}</a>
+    </li>
+  </ul>
 </md-dialog-content>
