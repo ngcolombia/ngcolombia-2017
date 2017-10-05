@@ -2,7 +2,7 @@ import { SpeakerService } from './speakers/speaker.service';
 import { CountdownService } from './countdown/countdown.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MdButtonModule, MdDialogModule, MatTabsModule } from '@angular/material';
+import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -16,6 +16,9 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { TimeBoxComponent } from './countdown/time-box/time-box.component';
 import { SpeakerDetailComponent } from './speakers/speaker-detail/speaker-detail.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
 	declarations: [
@@ -28,12 +31,16 @@ import { FooterComponent } from './footer/footer.component';
 		MainPageComponent,
 		TimeBoxComponent,
 		SpeakerDetailComponent,
-		FooterComponent
+		FooterComponent,
+		HeaderComponent,
+		NavMenuComponent,
+		LogoComponent
 	],
 	imports: [
 		MdButtonModule,
 		MdDialogModule,
 		MatTabsModule,
+		MatSidenavModule,
 		FlexLayoutModule,
 		BrowserAnimationsModule,
 		BrowserModule

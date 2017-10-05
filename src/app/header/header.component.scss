@@ -1,0 +1,13 @@
+.icon-bar{
+	background: #fff;
+	width: 20px;
+	display: block;
+    width: 22px;
+    height: 2px;
+	border-radius: 1px;
+	margin-bottom: 4px;
+
+	&:last-child{
+		margin-bottom: 0px;
+	}
+}

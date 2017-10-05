@@ -8,9 +8,15 @@ $brainshark-app-theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($brainshark-app-theme);
 
-.mat-raised-button, {
+.mat-raised-button {
 	border-radius: 25px !important;
-	padding: 6px 30px !important;
+	padding: 3px 28px !important;
+}
+
+.mat-raised-button.toogle-side-bar {
+	border-radius: 3px !important;
+	padding: 10px !important;
+	min-width: 0px;
 }
 
 strong{
