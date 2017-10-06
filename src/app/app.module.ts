@@ -20,6 +20,8 @@ import { HeaderComponent } from './header/header.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { LogoComponent } from './logo/logo.component';
 import { SmoothScrollDirective } from './smooth-scroll/smooth-scroll.directive';
+import { VenuInformationComponent } from './venu-information/venu-information.component';
+import { LocationMapComponent } from './location-map/location-map.component';
 
 @NgModule({
 	declarations: [
@@ -36,7 +38,9 @@ import { SmoothScrollDirective } from './smooth-scroll/smooth-scroll.directive';
 		HeaderComponent,
 		NavMenuComponent,
 		LogoComponent,
-		SmoothScrollDirective
+		SmoothScrollDirective,
+		VenuInformationComponent,
+		LocationMapComponent
 	],
 	imports: [
 		MdButtonModule,
