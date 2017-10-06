@@ -38,7 +38,8 @@ export class SmoothScrollDirective {
 				this.scrollTo(leapY, timer * speed);
 				leapY += step;
 				if (leapY > stopY) {
-					leapY = stopY; timer++;
+					leapY = stopY;
+					timer++;
 				}
 			}
 			return;
