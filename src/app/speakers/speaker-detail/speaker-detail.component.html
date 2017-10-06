@@ -1,9 +1,14 @@
-<h1 md-dialog-title>{{speaker.name}}</h1>
-<md-dialog-content>
-  <p [innerHTML]="speaker.bio"></p>
-  <ul>
-    <li *ngIf="speaker.social.twitter">
-      <a href="https://twitter.com/{{speaker.social.twitter}}">@{{speaker.social.twitter}}</a>
-    </li>
-  </ul>
+<md-dialog-content id="dialog-content">
+  <div class="img-container">
+    <img [src]="speaker.picture" [alt]="speaker.name">
+  </div>
+  <div class="speaker-content">
+    <h1 md-dialog-title>{{speaker.name}}</h1>
+    <p [innerHTML]="speaker.bio"></p>
+    <ul>
+      <li *ngIf="speaker.social.twitter">
+        <a href="https://twitter.com/{{speaker.social.twitter}}"><i class="fa fa-twitter fa-2x"></i></a>
+      </li>
+    </ul>
+  </div>
 </md-dialog-content>
