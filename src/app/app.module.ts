@@ -22,6 +22,7 @@ import { LogoComponent } from './logo/logo.component';
 import { SmoothScrollDirective } from './smooth-scroll/smooth-scroll.directive';
 import { VenuInformationComponent } from './venu-information/venu-information.component';
 import { LocationMapComponent } from './location-map/location-map.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 @NgModule({
 	declarations: [
@@ -40,7 +41,8 @@ import { LocationMapComponent } from './location-map/location-map.component';
 		LogoComponent,
 		SmoothScrollDirective,
 		VenuInformationComponent,
-		LocationMapComponent
+		LocationMapComponent,
+		PricingComponent
 	],
 	imports: [
 		MdButtonModule,
