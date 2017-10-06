@@ -7,7 +7,7 @@ html{
     height: 100%;
     position: relative;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
 }
 
 body{
@@ -195,4 +195,10 @@ blockquote {
 .speakerDetail .mat-dialog-container {
     padding: 0px 0px;
     border-radius: 10px;
+}
+
+.md-fab-bottom-right {
+	position: fixed !important;
+	bottom: 50px;
+	right: 10px;
 }

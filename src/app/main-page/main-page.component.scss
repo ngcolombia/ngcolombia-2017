@@ -1,3 +1,7 @@
 #location-map{
 	padding: 0px;
 }
+
+:host{
+	scroll-behavior: smooth;
+}
