@@ -1,17 +1,7 @@
-.days{
-	color: #ee163a;
-}
+@import '../../style/palette';
 
-.hours{
-	color: #FFC107;
-}
-
-.minutes{
-	color: #03A9F4;
-}
-
-.seconds{
-	color: #8BC34A;
+.time-box {
+	color: map-get($md-ngcolombiablue, 300);
 }
 
 .countdown-container {

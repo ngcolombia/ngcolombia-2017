@@ -1,8 +1,10 @@
+import { EventScheduleService } from './event-schedule/shared/event-schedule.service';
+import { EventSchedule } from './event-schedule/shared/event-schedule.model';
 import { SpeakerService } from './speakers/speaker.service';
 import { CountdownService } from './countdown/countdown.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule } from '@angular/material';
+import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -23,6 +25,7 @@ import { SmoothScrollDirective } from './smooth-scroll/smooth-scroll.directive';
 import { VenuInformationComponent } from './venu-information/venu-information.component';
 import { LocationMapComponent } from './location-map/location-map.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { EventScheduleComponent } from './event-schedule/event-schedule.component';
 
 @NgModule({
 	declarations: [
@@ -42,19 +45,21 @@ import { PricingComponent } from './pricing/pricing.component';
 		SmoothScrollDirective,
 		VenuInformationComponent,
 		LocationMapComponent,
-		PricingComponent
+		PricingComponent,
+		EventScheduleComponent
 	],
 	imports: [
 		MdButtonModule,
 		MdDialogModule,
 		MatTabsModule,
 		MatSidenavModule,
+		MatCardModule,
 		FlexLayoutModule,
 		BrowserAnimationsModule,
 		BrowserModule
 	],
 	entryComponents: [ SpeakerDetailComponent ],
-	providers: [ CountdownService, SpeakerService ],
+	providers: [ CountdownService, SpeakerService, EventScheduleService ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule { }
