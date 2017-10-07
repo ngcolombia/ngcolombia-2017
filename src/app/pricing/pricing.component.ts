@@ -29,7 +29,7 @@ export class PricingComponent implements OnInit {
 				'Free Coffee',
 				'Swag'
 			],
-			notes: '<strong>Important!</strong> workshop tickets are not included in this bundle'
+			notes: '<strong>Important:</strong> Workshop tickets are not included in this bundle'
 		},
 		{
 			title: 'Workshop #2',
