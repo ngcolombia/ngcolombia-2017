@@ -1,11 +1,14 @@
 .pricing-info-content {
-    padding: 150px 30px;
+    padding: 50px 60px;
+    margin: 20px;
     display: inline-block;
     background: white;
     border-radius: 5px; 
     @media (min-width: 768px){
         margin: 10px;
+        padding: 50px 90px;
     }
+    
 	h4{
         font-size: 24px;
 		margin: 20px 0px;
@@ -20,7 +23,7 @@
 }
 
 .pricing-items{
-    margin: 10px;;
+    margin: 20px;;
 
     @media (min-width: 768px){
         max-width: 85%;
@@ -32,14 +35,11 @@
     position: relative;
 }
 
-.pricing-price .currency {
-        position: absolute;
-        font-size: 10px;
-        top: 450px;
-        left: 35px;
+.pricing-features{
+    margin: 20px;
+}
 
-        @media (min-width: 760px) {
-            left: 155px;
-        }
-    
+.pricing-price .currency {
+    margin-right: 2px;
+    font-size: 10px;
 }
