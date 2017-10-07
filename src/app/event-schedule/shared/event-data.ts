@@ -15,7 +15,7 @@ export const eventData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim arcu pulvinar vulputate scelerisque. Quisque sed elit vel quam rhoncus mollis. Praesent quis elit at ligula hendrerit luctus id ut magna. Curabitur nec turpis a justo pharetra finibus. Sed porta felis volutpat risus luctus',
 		'Carlos Angulo',
-		'./assets/img/profiles/user1.jpg'),
+		'./assets/img/profiles/carlos_angulo.jpg'),
 	new EventSchedule(
 		'11:00 AM',
 		'12:00 M',
@@ -23,7 +23,7 @@ export const eventData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim arcu pulvinar vulputate scelerisque. Quisque sed elit vel quam rhoncus mollis. Praesent quis elit at ligula hendrerit luctus id ut magna. Curabitur nec turpis a justo pharetra finibus. Sed porta felis volutpat risus luctus',
 		'Josue Gutierrez',
-		'./assets/img/profiles/user1.jpg'),
+		'./assets/img/profiles/carlos_angulo.jpg'),
 	new EventSchedule(
 		'12:00 M',
 		'1:00 PM',
@@ -39,7 +39,7 @@ export const eventData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim arcu pulvinar vulputate scelerisque. Quisque sed elit vel quam rhoncus mollis. Praesent quis elit at ligula hendrerit luctus id ut magna. Curabitur nec turpis a justo pharetra finibus. Sed porta felis volutpat risus luctus',
 		'Carlos Angulo',
-		'./assets/img/profiles/user1.jpg'),
+		'./assets/img/profiles/carlos_angulo.jpg'),
 	new EventSchedule(
 		'1:00 PM',
 		'2:00 PM',
@@ -47,7 +47,7 @@ export const eventData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim arcu pulvinar vulputate scelerisque. Quisque sed elit vel quam rhoncus mollis. Praesent quis elit at ligula hendrerit luctus id ut magna. Curabitur nec turpis a justo pharetra finibus. Sed porta felis volutpat risus luctus',
 		'Facilitor',
-		'./assets/img/profiles/user1.jpg'),
+		'./assets/img/profiles/carlos_angulo.jpg'),
 
 	new EventSchedule(
 		'2:00 PM',
@@ -56,5 +56,5 @@ export const eventData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim arcu pulvinar vulputate scelerisque. Quisque sed elit vel quam rhoncus mollis. Praesent quis elit at ligula hendrerit luctus id ut magna. Curabitur nec turpis a justo pharetra finibus. Sed porta felis volutpat risus luctus',
 		'Facilitator',
-		'./assets/img/profiles/user1.jpg')
+		'./assets/img/profiles/carlos_angulo.jpg')
 ];
