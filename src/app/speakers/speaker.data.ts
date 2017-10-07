@@ -8,7 +8,7 @@ export const speakersData = [
 	new Speaker('Simona Cottin',
 		'Microsoft, London',
 		'Simona is an enthusiastic full stack developer with experience in building rich data visualization tools for network data and more recently building apps in the cloud. Communities power her up and that´s why she is co-organising the London Javascript meetup. Passionate about knowledge sharing, she has also worked on workshops for Women Who Code in Dublin and NgGirls in Copenhagen encouraging women to learn more about programming.',
-		{ twitter: 'simona_cotin' }, './assets/img/profiles/simona_cottin.png'),
+		{ twitter: 'simona_cotin' }, './assets/img/profiles/simona_cottin.jpg'),
 	new Speaker('Luis Aviles',
 		'Angular Bolivia Rockstar',
 		'Software Developer, Angular lover, Trainer, Speaker, Photography and Astrophotography enthusiast.',
