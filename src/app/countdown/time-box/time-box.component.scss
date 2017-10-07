@@ -1,12 +1,16 @@
-.time{
+.time {
 	line-height: 100%;
-    font-size: 62px;
+    font-size: 45px;
 	font-weight: 700;
 	text-align: center;
+	@media (min-width:680px) {
+    	font-size: 62px;
+	}
 }
 
-.label{
+.label {
 	line-height: 100%;
 	font-size: 24px;
 	text-align: center;
+	margin-bottom: 20px;
 }

@@ -1,24 +1,28 @@
-.days{
+.days {
 	color: #ee163a;
 }
 
-.hours{
+.hours {
 	color: #FFC107;
 }
 
-.minutes{
+.minutes {
 	color: #03A9F4;
 }
 
-.seconds{
+.seconds {
 	color: #8BC34A;
 }
 
 .countdown-container {
-	 width: 80%;
-	 margin: auto;
+	width: 80%;
+	margin: 20px auto 0;
+	@media (min-width: 529px) {
+		margin-top: 0;
+	}
+
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
 	width: 100%;
 }

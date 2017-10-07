@@ -24,9 +24,9 @@ export const speakersData = [
 	new Speaker('Minko Gechev',
 		'Google Developer Expert, Co-founder & CTO at Rhyme',
 		'Minko is co-founder & CTO at Rhyme with a strong passion for open source. He loves to experiment with theoretical concepts and apply them in practice. Minko teaches, speaks and writes about JavaScript, Angular and computer science. Some of the projects he works on are his book "Switching to Angular", the Angular style guide, codelyzer, angular-seed, and many others.',
-		{ twitter: 'mgechev' }, './assets/img/profiles/descarga.jpg'),
+		{ twitter: 'mgechev' }, './assets/img/profiles/minko_gechev.jpg'),
 	new Speaker('Carlos Angulo',
-		'Designer and Frontend developer and Animation Expert',
+		'Industrial Designer, Frontend developer and Animation Expert',
 		'Industrial desinger. Frontend Developer, animator and UX-UI expert',
-		{ twitter: 'carlosacns' }, './assets/img/profiles/user6.jpg')
+		{ twitter: 'carlosacns' }, './assets/img/profiles/carlos_angulo.jpg')
 ];

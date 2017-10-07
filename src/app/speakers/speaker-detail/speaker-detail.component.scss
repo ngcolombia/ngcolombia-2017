@@ -1,12 +1,14 @@
 .img-container {
-    @media (min-width: 320px) {
-        display: none
-    }
+    width: 40%;
+    display: none;
+    margin-right: 30px;
     @media (min-width: 992px) {
-        display: grid
+        display: block;
+        float: left;
     }
-    @media (min-width: 1200px) {
-        display: grid
+    img {
+        display: block;
+        width: 100%;
     }
 }
 
@@ -19,8 +21,13 @@
 }
 
 md-dialog-content{
-    display: flex;
+    display: block;
     margin: 0;
+    &:after{
+        display: block;
+        content: "";
+        clear: both;
+    }
 }
 
 .mat-dialog-content{
