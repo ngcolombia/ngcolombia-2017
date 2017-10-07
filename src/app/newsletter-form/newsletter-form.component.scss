@@ -1,79 +1,60 @@
-.section-title {
-  margin-bottom: 40px;
+@import '../../style/palette';
+
+$spacing : 40px;
+
+.section-title, .section-sub-title {
+  margin-bottom: $spacing;
+}
+
+.any-question-container{
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
 }
 
 .subscribe-form {
   margin-bottom: 15px;
   position: relative;
   max-width: 650px;
-  margin: 0 auto;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  margin-bottom: $spacing;
+
   * {
     box-sizing: border-box;
   }
+
   input.email {
     width: 100%;
-    display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     height: 50px;
     background: #000;
-    background: rgba(255, 255, 255, .35);
-    border: 1px solid #264f5c;
-    border-radius: 25px 0 0 25px;
+    background: rgba(0, 0, 0, 0.6);
     padding: 5px 20px;
     color: #fff;
     line-height: 1.42857143;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    margin-left: -25px;
+    border: 0px;
+    border-bottom: 2px solid white;
+    text-align: center;
+    margin-bottom: $spacing;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     &:focus {
       box-shadow: none;
-      border: 1px solid #5b1249;
+      border-color: map-get($md-ngcolombiablue, 900);
       outline: 0px;
     }
     [placeholder] {
       color: white !important;
     }
   }
-  ::-webkit-input-placeholder {
+  ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
     /* Chrome/Opera/Safari */
-    color: rgba(255, 255, 255, .8);
-    font-size: 14px;
+    color: white;
   }
-  ::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgba(255, 255, 255, .8);
-    font-size: 14px;
-  }
-  :-ms-input-placeholder {
-    /* IE 10+ */
-    color: rgba(255, 255, 255, .8);
-    font-size: 14px;
-  }
-  :-moz-placeholder {
-    /* Firefox 18- */
-    color: rgba(255, 255, 255, .8);
-    font-size: 14px;
-  }
-  .button {
-    position: absolute;
-    top: 0;
-    right: -50px;
-    border-radius: 0 25px 25px 0 !important;
-    height: 50px;
-    border: 0 !important;
-    padding-left: 50px;
-    padding-right: 50px;
-    text-transform: uppercase;
-    box-shadow: 0 0 0 transparent;
-  }
-}
-
-@media (max-width: 767px) {
-  .subscribe-form {
-    z-index: 1;
-    position: relative;
-    max-width: 310px;
-    margin: 0px auto;
-  }
+  
 }
 
 #fss-container {
@@ -89,3 +70,7 @@
   z-index: 1;
 }
 
+.contact-link {
+	font-size: 18px;
+	font-weight: bold;
+}

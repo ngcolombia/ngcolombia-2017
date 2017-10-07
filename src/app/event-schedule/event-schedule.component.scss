@@ -1,0 +1,30 @@
+@import '../../style/palette';
+
+.time-range {
+	font-weight: bold;
+}
+
+.event-image > img {
+	border-radius: 5px;
+}
+
+.event-image, .time-range {
+	padding-right: 20px;
+}
+
+.event-spot {
+	margin-bottom: 10px;
+}
+
+.event-name {
+	margin: 5px 0px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.event-facilitator {
+	color: map-get($md-ngcolombiablue, 900);
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+}

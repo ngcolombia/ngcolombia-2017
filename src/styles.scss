@@ -41,18 +41,18 @@ header {
 
 	.menu-items-container{
 		.mat-button{
-			min-width: 77px;
+			min-width: 0px;
 		}
 		> li {
-			padding: 0 10px;
+			padding: 0;
 			display: inline-block;
 
 			a:not(.menu-main-action){
-				padding: 28px 0px;
+				padding: 28px 3px;
 				color: rgb(255, 255, 255);
 				font-weight: bold;
 				&:hover, &:focus{
-					color: map-get($md-ngcolombia, 900);
+					color: map-get($md-ngcolombiablue, 900);
 				}
 			}
 		}
@@ -125,6 +125,11 @@ h3 {
         display: block;
         clear: both;
     }
+}
+
+#newsletter {
+	min-height: 100vh;
+	box-sizing: border-box;
 }
 
 .container {

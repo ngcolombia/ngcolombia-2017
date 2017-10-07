@@ -1,0 +1,23 @@
+<div class="container">
+	<h2 class="section-title">Event Schedule</h2>
+	<h3 class="section-sub-title">Don't Miss a Topic on the Event</h3>
+	<md-card *ngFor='let event of $schedule | async' class="event-spot">
+		<md-card-content>
+			<div class="event-content" fxLayout="row" fxLayoutWrap fxFill>
+				<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
+						{{event.startingTime}} - {{event.endingTime}}
+				</div>
+				<div class="event-image" fxFlex="10" fxFlex.sm="20" fxFlex.xs="30">
+					<img *ngIf="event.imgUrl" src="{{event.imgUrl}}" alt="" width="58">
+				</div>
+				<div class="event-information" fxFlex="80" fxFlex.sm="80" fxFlex.xs="70" >
+					<div class="event-facilitator">{{event.facilitator}}</div>
+					<h4 class="event-name">{{event.eventName}}</h4>
+					<p class="event-decription">
+						{{event.eventDescription}}
+					</p>
+				</div>
+			</div>
+		</md-card-content>
+	</md-card>
+</div>

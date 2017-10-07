@@ -1,8 +1,8 @@
 @import '~@angular/material/theming';
 @import 'palette';
 @include mat-core();
-$primary: mat-palette($md-ngcolombia);
-$accent:  mat-palette($md-ngcolombiasec);
+$primary: mat-palette($md-ngcolombiablue);
+$accent:  mat-palette($md-ngcolombia);
 $warn:  mat-palette($mat-red, 600, 100, 800);
 $brainshark-app-theme: mat-light-theme($primary, $accent, $warn);
 
@@ -54,6 +54,11 @@ md-icon.md-accent { font-size: map-get($accent, 900); }
 .mat-raised-button {
 	border-radius: 25px !important;
 	padding: 3px 28px !important;
+
+	&.md-big-button {
+		font-size: 18px;
+		padding: 6px 40px !important;
+	}
 }
 
 .mat-raised-button.toogle-side-bar {
