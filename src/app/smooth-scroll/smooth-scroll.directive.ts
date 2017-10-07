@@ -49,17 +49,12 @@ export class SmoothScrollDirective {
 
 	tick() {
 		this.currentTime += 1 / 60;
-		console.log(`current time ${this.currentTime}, time ${this.time}`);
 		const p = this.currentTime / this.time;
 		const t = this.easeOutSine(p);
-		console.log(`p:  ${p}, time ${t}`);
 		if (p < 1) {
 			requestAnimationFrame(() => this.tick());
-			console.log(this.currentScrollY + ((this.targetScrollPosition - this.currentScrollY) * t));
-
 			window.scrollTo(0, this.currentScrollY + ((this.targetScrollPosition - this.currentScrollY) * t));
 		} else {
-			console.log('scroll done');
 			window.scrollTo(0, this.targetScrollPosition);
 		}
 	}
