@@ -1,8 +1,8 @@
 <div *ngIf="!remainingTime?.hasStarted" class="countdown-container" fxLayout="row" fxLayoutAlign="center center" fxLayoutWrap>
-	<app-time-box fxFlex.xs="50%" class="time-box days" [value]="remainingTime?.days" label="Days"></app-time-box>
-	<app-time-box fxFlex.xs="50%" class="time-box hours" [value]="remainingTime?.hours" label="Hours"></app-time-box>
-	<app-time-box fxFlex.xs="50%" class="time-box minutes" [value]="remainingTime?.minutes" label="Minutes"></app-time-box>
-	<app-time-box fxFlex.xs="50%" class="time-box seconds" [value]="remainingTime?.seconds" label="Seconds"></app-time-box>
+	<app-time-box class="time-box days" [value]="remainingTime?.days" label="Days"></app-time-box>
+	<app-time-box class="time-box hours" [value]="remainingTime?.hours" label="Hours"></app-time-box>
+	<app-time-box class="time-box minutes" [value]="remainingTime?.minutes" label="Minutes"></app-time-box>
+	<app-time-box class="time-box seconds" [value]="remainingTime?.seconds" label="Seconds"></app-time-box>
 </div>
 <div *ngIf="remainingTime?.hasStarted" class="started-message">
 	{{currentDayMessage}}
