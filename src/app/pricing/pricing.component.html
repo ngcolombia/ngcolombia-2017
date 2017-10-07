@@ -1,4 +1,5 @@
 <div class="pricing-container">
+<h3 class="section-sub-title">workshop tickets are not included in this bundle</h3>
   <div class="pricing-items" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
     <div *ngFor="let price of prices" class="pricing-info-content" fxFlex="1 grow">
       <div class="pricing-header">
@@ -8,7 +9,8 @@
         <ul>
           <li class="princing-item" *ngFor="let item of price.includes">{{item}}</li>
         </ul>
-      </div>
+	  </div>
+	  <div class="pricing-notes" [innerHTML]="price.notes"></div>
       <h2 class="pricing-price">$ {{price.value}}</h2>
       <!-- <div class="plan-action"> -->
         <!-- <button class="mat-raised-button">Buy now</button> -->
