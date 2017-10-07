@@ -30,10 +30,17 @@ md-dialog-content{
     }
 }
 
-.mat-dialog-content{
+.mat-dialog-content{    
     padding: 0 0;
 }
 
+@media screen and (min-width: 1000px) {
+    .mat-dialog-content{    
+        overflow: hidden;
+    }
+}
+
+// overflow: hidden;
 a .fa-twitter{
     color: #0077b5;
 }
