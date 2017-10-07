@@ -1,67 +1,18 @@
 <div class="pricing-container">
   <div class="pricing-items" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
-    <div class="pricing-info-content" fxFlex="1 grow">
+    <div *ngFor="let price of prices" class="pricing-info-content" fxFlex="1 grow">
       <div class="pricing-header">
-        <h4 class="pricing-info-title">Early Bird</h4>
-        <h2  class="pricing-price">
-          <span class=currency>$</span>
-          <strong>149</strong>
-          <small>/1 Person</small>
-        </h2>
+        <h4 class="pricing-info-title">{{price.title}}</h4>
       </div>
       <div class="pricing-features">
         <ul>
-          <li>1 Conference day</li>
-          <li>1 Workshop</li>
-          <li>Free Coffe/Lunch</li>
-          <li>Custom Badge</li>
+          <li class="princing-item" *ngFor="let item of price.includes">{{item}}</li>
         </ul>
       </div>
-      <div class="plan-action">
-        <button class="mat-raised-button">Buy now</button>
-      </div>
-    </div>
-    <div class="pricing-info-content" fxFlex="1 grow">
-      <div class="pricing-header">
-        <h4 class="pricing-info-title">Early Bird</h4>
-        <h2  class="pricing-price">
-          <span class=currency>$</span>
-          <strong>149</strong>
-          <small>/1 Person</small>
-        </h2>
-      </div>
-      <div class="pricing-features">
-        <ul>
-          <li>1 Conference day</li>
-          <li>1 Workshop</li>
-          <li>Free Coffe/Lunch</li>
-          <li>Custom Badge</li>
-        </ul>
-      </div>
-      <div class="plan-action">
-        <button class="mat-raised-button">Buy now</button>
-      </div>
-    </div>
-    <div class="pricing-info-content" fxFlex="1 grow">
-      <div class="pricing-header">
-        <h4 class="pricing-info-title">Early Bird</h4>
-        <h2  class="pricing-price">
-          <span class=currency>$</span>
-          <strong>149</strong>
-          <small>/1 Person</small>
-        </h2>
-      </div>
-      <div class="pricing-features">
-        <ul>
-          <li>1 Conference day</li>
-          <li>1 Workshop</li>
-          <li>Free Coffe/Lunch</li>
-          <li>Custom Badge</li>
-        </ul>
-      </div>
-      <div class="plan-action">
-        <button class="mat-raised-button">Buy now</button>
-      </div>
+      <h2 class="pricing-price">$ {{price.value}}</h2>
+      <!-- <div class="plan-action"> -->
+        <!-- <button class="mat-raised-button">Buy now</button> -->
+      <!-- </div> -->
     </div>
   </div>
 </div>
