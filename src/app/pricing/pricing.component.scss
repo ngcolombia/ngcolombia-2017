@@ -1,45 +1,61 @@
 .pricing-info-content {
-    padding: 150px 30px;
+    padding: 24px 50px;
+    margin: 20px;
     display: inline-block;
     background: white;
-    border-radius: 5px; 
-    @media (min-width: 768px){
+    border-radius: 5px;
+    text-align: center;
+    @media (min-width: 768px) {
         margin: 10px;
     }
-	h4{
+    h4 {
         font-size: 24px;
-		margin: 20px 0px;
-		font-weight: 700;
-	}
+        margin: 20px 0px;
+        font-weight: 700;
+    }
 }
 
-.pricing-container{
+.pricing-info-title {
+    background-color: #55284f;
+    padding: 1rem;
+    color: white;
+}
+
+h2.pricing-price {
+    text-align: center;
+    color: #55284f;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.pricing-features {
+    font-size: 1rem;
+}
+
+li.princing-item {
+    padding: 1rem 0rem;
+    border-bottom: 1px solid darkgray;
+}
+
+.pricing-container {
     background: url(/assets/img/parallax3.jpg) no-repeat 50% 50% transparent;
-    background-size: cover; 
+    background-size: cover;
     padding: 150px 0;
 }
 
-.pricing-items{
-    margin: 10px;;
-
-    @media (min-width: 768px){
+.pricing-items {
+    margin: 20px;
+    @media (min-width: 768px) {
         max-width: 85%;
         margin: 0 120px;
     }
 }
 
-.pricing-info-title{
+.pricing-info-title {
     position: relative;
 }
 
 .pricing-price .currency {
-        position: absolute;
-        font-size: 10px;
-        top: 450px;
-        left: 35px;
-
-        @media (min-width: 760px) {
-            left: 155px;
-        }
-    
+    margin-right: 2px;
+    font-size: 10px;
 }
