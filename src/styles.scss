@@ -11,7 +11,7 @@ html{
 }
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Muli', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased !important;
 	color:#303030;
@@ -62,11 +62,13 @@ header {
 p {
 	margin: 0 0 10px;
 }
-
+h1, h2{
+	font-family: Poppins, sans-serif;;
+	text-transform: uppercase;
+}
 .h1, .h2, .h3, h1, h2, h3 {
     margin-top: 20px;
-	margin-bottom: 10px;
-	font-family: Lato;
+	margin-bottom: 10px;	
 }
 
 ul, li {
@@ -99,6 +101,13 @@ section, footer {
     padding-bottom: 15px;
 	position: relative;
 	text-align: center;
+
+	.section-underline {
+		padding-bottom: 20px;
+		border-bottom: 2px solid #303030;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
 }
 
 .section-sub-title {
@@ -178,7 +187,7 @@ blockquote {
     line-height: 24px;
     border-left: 3px solid #ee163a;
     font-style: italic;
-    font-family: Lato;
+    font-family: Poppins, sans-serif;;
 }
 
 .img-responsive {

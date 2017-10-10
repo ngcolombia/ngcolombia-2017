@@ -11,6 +11,10 @@ $spacing : 40px;
 	position: relative;
 	text-align: center;
 	font-weight: bold;
+
+	.section-sub-title{
+		margin-bottom: $spacing /2;
+	}
 }
 
 .subscribe-form {
@@ -20,7 +24,7 @@ $spacing : 40px;
   margin-left:auto;
   margin-right:auto;
   text-align: center;
-  margin-bottom: $spacing;
+  margin-bottom: $spacing * 2;
 
   * {
     box-sizing: border-box;
@@ -31,7 +35,7 @@ $spacing : 40px;
     font-size: 20px;
     height: 50px;
     background: #000;
-    background: rgba(0, 0, 0, 0.6);
+    background: transparent;
     padding: 5px 20px;
     color: #fff;
     line-height: 1.42857143;
@@ -40,7 +44,9 @@ $spacing : 40px;
     border-bottom: 2px solid white;
     text-align: center;
     margin-bottom: $spacing;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	max-width: 400px;
+
     &:focus {
       box-shadow: none;
       border-color: map-get($md-ngcolombiablue, 900);
