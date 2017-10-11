@@ -9,8 +9,8 @@
           <li class="princing-item" *ngFor="let item of price.includes">{{item}}</li>
         </ul>
 	  </div>
+    <h2 class="pricing-price">$ {{price.value}}</h2>
 	  <div class="pricing-notes" [innerHTML]="price.notes"></div>
-      <h2 class="pricing-price">$ {{price.value}}</h2>
       <!-- <div class="plan-action"> -->
         <!-- <button class="mat-raised-button">Buy now</button> -->
       <!-- </div> -->
