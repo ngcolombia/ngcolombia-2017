@@ -12,7 +12,7 @@ export class PricingComponent implements OnInit {
 	prices = [
 		{
 			title: 'Workshop #1 ',
-			value: 15,
+			value: 20,
 			includes: [
 				'Access to Workshop #1',
 				'Morning snacks',
@@ -33,7 +33,7 @@ export class PricingComponent implements OnInit {
 		},
 		{
 			title: 'Workshop #2',
-			value: 15,
+			value: 20,
 			includes: [
 				'Access to Workshop #2',
 				'Morning snacks',
