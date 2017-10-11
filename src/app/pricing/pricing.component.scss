@@ -29,26 +29,31 @@ h2.pricing-price {
 		font-weight: 700;
 	}
 	&:first-child {
-		margin-right: 0px;
-		border-top-right-radius: 0px;
-		border-bottom-right-radius: 0px;
+		
+		@media(min-width: 960px) {
+			margin-right: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
 	}
 	&:last-child {
-		margin-left: 0px;
-		border-top-left-radius: 0px;
-		border-bottom-left-radius: 0px;
+		@media(min-width: 960px) {
+			margin-left: 0px;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
 	}
 	&:nth-child(2) {
-		margin-left: 0px;
-		margin-right: 0px;
-		margin-top: -20px;
-		margin-bottom: -20px;
-		flex-grow: 1.2 !important;
+		
 		.pricing-info-title, h2.pricing-price {
 			color: map-get($md-ngcolombiablue, 600);
 		}
 
 		@media(min-width: 960px) {
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: -20px;
+			margin-bottom: -20px;
 		}
 	}
 }
