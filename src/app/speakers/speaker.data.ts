@@ -5,7 +5,7 @@ export const speakersData = [
 		'Google Developer Expert, @AngularMexico organizer',
 		'@Google Developer Expert in Web Technologies • Organizer of @angularmexico • ♥ @xochalarcon • Human',
 		{ twitter: 'eusoj' }, './assets/img/profiles/josue_gutierrez.jpg'),
-	new Speaker('Simona Cottin [Via Hangouts]',
+	new Speaker('Simona Cotin [Via Hangouts]',
 		'Microsoft, London',
 		'Simona is an enthusiastic full stack developer with experience in building rich data visualization tools for network data and more recently building apps in the cloud. Communities power her up and that´s why she is co-organising the London Javascript meetup. Passionate about knowledge sharing, she has also worked on workshops for Women Who Code in Dublin and NgGirls in Copenhagen encouraging women to learn more about programming.',
 		{ twitter: 'simona_cotin' }, './assets/img/profiles/simona_cottin.jpg'),
@@ -27,6 +27,6 @@ export const speakersData = [
 		{twitter: 'villanuevand' }, './assets/img/profiles/andres_villanueva.jpg'),
 	new Speaker('Israel Guzmán',
 		'Experienced Angular/AngularJS developer',
-		'Israel, comenzó a programar hace 23 años cuando tenía 12, tiene 5 años desarrollando con AngularJS y casi 2 años con Angular, desde la primer versión beta. Creó en Youtube el primer canal de AngularJS en español, fue uno de los organizadores del Meetup de Angular en la Ciudad de México, es parte del equipo de docs oficiales de Angular, así como líder de los docs oficiales en español y esta obsesionado con las nuevas tecnologías web y móviles.',
+		'Israel\'s been programming for the past 22 years, and he\'s an experienced Angular and AngularJS Senior Developer. <br> He made the first AngularJS Youtube channel in Spanish and former Mexico City\'s Angular Meetups organizer.',
 		{ twitter: 'israelgp4' }, './assets/img/profiles/israel_guzman.png'),
 ];
