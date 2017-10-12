@@ -66,7 +66,7 @@
 
 .cards-item:hover {
     .cards-image:before  {
-        opacity: 1;
+        opacity: 0;
     }
     .cards-info {
         background-color: #ffdff7;
@@ -89,14 +89,14 @@
     content: '';
     position: absolute;
     transition: opacity 0.3s ease-out;
-    background: rgba(91, 18, 73, 1);
+    background: rgb(10, 10, 10);
     mix-blend-mode: color;
     border-radius: 5px 5px 0 0;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
+    opacity: 1;
 }
 
 .cards-social-links li {

@@ -26,6 +26,7 @@ import { VenuInformationComponent } from './venu-information/venu-information.co
 import { LocationMapComponent } from './location-map/location-map.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { EventScheduleComponent } from './event-schedule/event-schedule.component';
+import { CommunityPartnersComponent } from './community-partners/community-partners.component';
 
 @NgModule({
 	declarations: [
@@ -46,7 +47,8 @@ import { EventScheduleComponent } from './event-schedule/event-schedule.componen
 		VenuInformationComponent,
 		LocationMapComponent,
 		PricingComponent,
-		EventScheduleComponent
+		EventScheduleComponent,
+		CommunityPartnersComponent
 	],
 	imports: [
 		MdButtonModule,

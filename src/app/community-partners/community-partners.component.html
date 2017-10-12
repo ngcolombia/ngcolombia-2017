@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="section-title"><span class="section-underline">Community Partners</span></h2>
+  <div class="community-partners-list" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div class="community-partners-item" *ngFor="let partner of partners" fxFlex="auto">
+      <div class="partner-image">
+        <img src="{{partner.url}}" alt="{{partner.name}}">
+      </div>
+      <div class="partner-name">
+        <span>{{partner.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>

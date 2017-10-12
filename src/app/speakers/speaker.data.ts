@@ -23,7 +23,7 @@ export const speakersData = [
 		{ twitter: 'mgechev' }, './assets/img/profiles/minko_gechev.jpg'),
 	new Speaker('Andrés Villanueva',
 		'Angular + Firebase Expert',
-		'Venezolano, Desarrollador Frontend, JavaScripter, fanático de metodologías ágiles y patrones de desarrollo.',
+		'Venezuelan, Frontend Developer, JavaScripter, agile metodologies and design patterns enthusiast.',
 		{ twitter: 'villanuevand' }, './assets/img/profiles/andres_villanueva.jpg'),
 	new Speaker('Israel Guzmán',
 		'Experienced Angular/AngularJS developer',
