@@ -7,7 +7,7 @@ import { Component, Output, Input, EventEmitter } from '@angular/core';
 })
 export class NavMenuComponent {
 	@Input() showPrimaryButton = true;
-	@Input() menuColor = 'accent';
+	@Input() menuColor = 'primary';
 	@Output() onMenuItemSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
 
 	select(): void {

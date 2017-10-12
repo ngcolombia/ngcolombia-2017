@@ -14,28 +14,30 @@
 }
 
 .banner-title {
-	background-color: #55284f;
+	border: 2px solid #fff;
 	display: inline-block;
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 31px;
     line-height: 1.2;
     text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: center;
 	margin: 20px 0 4px;
-    margin-top: 2rem;
+	margin-top: 2rem;
+	
 	@media (min-width: 767px){
 		font-size: 42px;
 	}
 }
 
 .banner-desc {
-	background-color: #55284f;
+	background-color: #fff;
     display: inline-block;
-    padding: 1rem;
+	padding: 1rem 2rem;
+	color: #55284f;
 	font-size: 18px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 2px;
 	line-height: normal;
 	text-align: center;

@@ -1,7 +1,7 @@
 <md-sidenav-container>
 	<md-sidenav #sidenav class="sidenav">
 		<app-logo></app-logo>
-		<app-nav-menu (onMenuItemSelected)="closeNav($event)"></app-nav-menu>
+		<app-nav-menu (onMenuItemSelected)="closeNav($event)" color="primary"></app-nav-menu>
 	</md-sidenav>
 	<header>
 		<app-header (onToggleNav)="openNav($event)"></app-header>
