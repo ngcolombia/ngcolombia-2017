@@ -85,7 +85,7 @@ a {
 }
 
 section, footer {
-	padding: 80px 0;
+	padding: 100px 0;
     position: relative;
 }
 
@@ -101,6 +101,7 @@ section, footer {
     padding-bottom: 15px;
 	position: relative;
 	text-align: center;
+	color: #5A5A5A;
 
 	.section-underline {
 		padding-bottom: 20px;
@@ -112,7 +113,6 @@ section, footer {
 
 .section-sub-title {
 	display: block;
-    max-width: 80%;
     font-size: 18px;
 	margin: 0 auto 60px;
 	text-align: center;
@@ -128,7 +128,7 @@ h3 {
 	color: #ffffff;
     background: url(/assets/img/parallax2-min.jpg) no-repeat fixed 50% 50% #1c1c1c;
     background-size: cover;
-	padding: 100px 0;
+	padding: 150px 0;
     &:after {
         content: "";
         display: block;

@@ -1,7 +1,7 @@
 .time {
     line-height: 100%;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     @media (max-width: 690px) {
         font-size: 28px;
@@ -16,7 +16,8 @@
 .label {
     line-height: 100%;
     font-size: 24px;
-    text-align: center;
+	text-align: center;
+	font-weight: bold;
     margin-bottom: 20px;
     @media (max-width: 690px) {
         font-size: 16px;

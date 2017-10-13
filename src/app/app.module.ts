@@ -27,6 +27,7 @@ import { LocationMapComponent } from './location-map/location-map.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { EventScheduleComponent } from './event-schedule/event-schedule.component';
 import { CommunityPartnersComponent } from './community-partners/community-partners.component';
+import { PhotographerCreditLinkComponent } from './photographer-credit-link/photographer-credit-link.component';
 
 @NgModule({
 	declarations: [
@@ -48,7 +49,8 @@ import { CommunityPartnersComponent } from './community-partners/community-partn
 		LocationMapComponent,
 		PricingComponent,
 		EventScheduleComponent,
-		CommunityPartnersComponent
+		CommunityPartnersComponent,
+		PhotographerCreditLinkComponent
 	],
 	imports: [
 		MdButtonModule,

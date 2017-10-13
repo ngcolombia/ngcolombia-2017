@@ -1,0 +1,37 @@
+:host {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  a {
+	background-color: black;
+	background-color: rgba(0, 0, 0, .7);
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    font-family: Muli, -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.2;
+    display: inline-block;
+	border-radius: 0px;
+	display: flex;
+    svg {
+      height: 12px;
+      width: auto;
+      position: relative;
+      vertical-align: middle;
+      top: -1px;
+      fill: white;
+    }
+    .camera-icon {
+      display: inline-block;
+      padding: 2px 3px;
+    }
+    .author-name {
+      display: inline-block;
+      padding: 2px 3px;
+    }
+  }
+}
+

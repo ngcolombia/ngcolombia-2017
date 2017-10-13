@@ -54,6 +54,7 @@ md-icon.md-accent { font-size: map-get($accent, 900); }
 .mat-raised-button {
 	border-radius: 25px !important;
 	padding: 3px 28px !important;
+	font-weight: bold;
 
 	&.md-big-button {
 		font-size: 18px;
