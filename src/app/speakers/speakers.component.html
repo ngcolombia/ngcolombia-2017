@@ -4,6 +4,7 @@
 	<li class="cards-item" *ngFor="let speaker of speakers" (click)="showSpeakerDetail(speaker)">
 		<div class="cards-image">
 			<img src="{{speaker.picture}}" alt="{{speaker.name}}">
+			<md-icon class="by-phone" *ngIf="speaker.viaConferenceCall" >phone</md-icon>
 		</div>
 		<div class="cards-info">
 			<h3 class="cards-name">{{speaker.name}}</h3>

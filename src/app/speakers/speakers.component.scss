@@ -42,7 +42,13 @@
 }
 
 .cards-item .cards-image {
-    position: relative;
+	position: relative;
+	
+	.by-phone{
+		position: absolute;
+		bottom: 5px;
+		left: 5px;	
+	}
 }
 
 .cards-item .cards-info {
