@@ -4,11 +4,12 @@
 $primary: mat-palette($md-ngcolombiablue);
 $accent:  mat-palette($md-ngcolombia);
 $warn:  mat-palette($mat-red, 600, 100, 800);
-$brainshark-app-theme: mat-light-theme($primary, $accent, $warn);
+$primary-color: mat-color($accent, 900);
+$ngcolombia-app-theme: mat-light-theme($primary, $accent, $warn);
 
-@include angular-material-theme($brainshark-app-theme);
+@include angular-material-theme($ngcolombia-app-theme);
 
-md-icon {
+md-icon, .material-icons {
 	font-family: 'Material Icons';
 	font-weight: normal;
 	font-style: normal;
@@ -51,14 +52,23 @@ md-icon.md-primary { color: map-get($primary, 900); }
 md-icon.md-warn { font-size: map-get($warn, 900); }
 md-icon.md-accent { font-size: map-get($accent, 900); }
 
+.mat-button {
+	font-family: Poppins, Roboto, sans-serif;
+}
+
 .mat-raised-button {
 	border-radius: 25px !important;
 	padding: 3px 28px !important;
-	font-weight: bold;
+	font-weight: 700;
+	font-family: Poppins, Roboto, sans-serif;
 
 	&.md-big-button {
 		font-size: 18px;
 		padding: 6px 40px !important;
+	}
+
+	&.mat-primary{
+		color: map-get($md-ngcolombia, 900);
 	}
 }
 
@@ -76,4 +86,9 @@ app-about-us .information-container{
 	.mat-tab-header{
 		display: none;
 	}
+}
+
+.mat-fab.mat-white-button{
+	background-color: #fff;
+	color: $primary-color;
 }

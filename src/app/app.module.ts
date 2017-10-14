@@ -4,9 +4,11 @@ import { SpeakerService } from './speakers/speaker.service';
 import { CountdownService } from './countdown/countdown.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule } from '@angular/material';
+// tslint:disable-next-line:max-line-length
+import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CountdownComponent } from './countdown/countdown.component';
@@ -58,12 +60,14 @@ import { PhotographerCreditLinkComponent } from './photographer-credit-link/phot
 		MatTabsModule,
 		MatSidenavModule,
 		MatCardModule,
+		MdIconModule,
 		FlexLayoutModule,
+		HttpModule,
 		BrowserAnimationsModule,
 		BrowserModule
 	],
 	entryComponents: [ SpeakerDetailComponent ],
-	providers: [ CountdownService, SpeakerService, EventScheduleService ],
+	providers: [ CountdownService, SpeakerService, EventScheduleService, MdIconRegistry ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule { }

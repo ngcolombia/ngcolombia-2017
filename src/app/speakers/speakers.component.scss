@@ -1,3 +1,5 @@
+@import '../../style/palette';
+
 .cards-list {
     margin: auto;
     padding: 0 5px;
@@ -60,7 +62,7 @@
 }
 
 .cards-name {
-    color: #7d1a65;
+    color: map-get($md-ngcolombia, 500);
     font-size: 18px;
     margin: 0 0 3px 0;
 }

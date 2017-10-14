@@ -5,5 +5,6 @@ export class Speaker {
 		public bio: string,
 		public social: any,
 		public picture: string,
+		public viaConferenceCall: boolean
 	) {}
 }
