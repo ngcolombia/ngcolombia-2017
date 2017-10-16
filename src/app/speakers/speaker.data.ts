@@ -29,4 +29,8 @@ export const speakersData = [
 		'Experienced Angular/AngularJS developer',
 		'Israel\'s been programming for the past 22 years, and he\'s an experienced Angular and AngularJS Senior Developer. <br> He made the first AngularJS Youtube channel in Spanish and former Mexico City\'s Angular Meetups organizer.',
 		{ twitter: 'israelgp4' }, './assets/img/profiles/israel_guzman.png', false),
+	new Speaker('Jorge Cano',
+		'Angular, Google, Nativescript Developer Expert',
+		'Jorge is Google Developer Expert in web technologies, Angular Developer Expert and Nativescript Developer Expert, international speaker, he has written several technical papers and an Angular Book.<br>He has more than 9 years of experiene as software developer<br><br>Jorge is a Full Stack developer focused on Javascript technologies. <br>Nowadays he is working at ByteDefault there he is using Angular / RxJS / NodeJS / Firebase and other leading-edge technologies. <br>He has been teacher in several courses related with Javascript.',
+		{ twitter: 'jorgeucano' }, './assets/img/profiles/jorge_cano.jpg', false),
 ];
