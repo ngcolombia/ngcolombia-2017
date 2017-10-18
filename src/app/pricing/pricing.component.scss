@@ -16,7 +16,7 @@ h2.pricing-price {
 }
 
 .pricing-info-content {
-    padding: 24px 50px;
+    padding: 24px 40px;
     margin: 20px;
     display: inline-block;
     background: white;
@@ -28,7 +28,7 @@ h2.pricing-price {
     }
     h4 {
 		font-size: 32px;
-		margin: 20px 0px;
+		margin: 20px -40px;
 		font-weight: 800;
 	}
 	&:first-child {
@@ -47,7 +47,7 @@ h2.pricing-price {
 		}
 	}
 	&:nth-child(2) {
-		z-index: 2;
+		z-index: 6;
 		.pricing-info-title, h2.pricing-price {
 			color: map-get($md-ngcolombiablue, 600);
 		}

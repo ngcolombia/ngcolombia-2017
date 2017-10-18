@@ -3,7 +3,7 @@
 	<h3 class="section-sub-title">Don't Miss a Topic on the Event</h3>
 	<md-card *ngFor='let event of $schedule | async' class="event-spot">
 		<md-card-content>
-			<div class="event-content" fxLayout="row" fxLayoutWrap fxFill>
+			<div class="event-content" fxLayout="row" fxLayoutWrap fxFill *ngIf="!event.isWorkshop">
 				<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
 						{{event.startingTime}} - {{event.endingTime}}
 				</div>
@@ -17,6 +17,27 @@
 						{{event.eventDescription}}
 					</p>
 				</div>
+			</div>
+			<div *ngIf="event.isWorkshop" fxLayout="row" fxLayoutWrap fxFill class="event-content">
+				<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
+						{{event.startingTime}} - {{event.endingTime}}
+				</div>
+				<div class="event-1-information" fxFlex="40" fxFlex.sm="40" fxFlex.xs="35" fxLayout="column" fxLayoutAlign="flex-start center" >
+					<img *ngIf="event.imgUrl" src="{{event.workshop_1.imgUrl}}" alt="" width="58">
+					<div class="event-facilitator">{{event.workshop_1.facilitator}}</div>
+					<h4 class="event-name">{{event.workshop_1.eventName}}</h4>
+					<p class="event-decription">
+						{{event.workshop_1.eventDescription}}
+					</p>
+				</div>
+				<div class="event-1-information" fxFlex="40" fxFlex.sm="40" fxFlex.xs="35"  fxLayout="column" fxLayoutAlign="flex-start center" >
+						<img *ngIf="event.imgUrl" src="{{event.workshop_2.imgUrl}}" alt="" width="58">
+						<div class="event-facilitator">{{event.workshop_2.facilitator}}</div>
+						<h4 class="event-name">{{event.workshop_2.eventName}}</h4>
+						<p class="event-decription">
+							{{event.workshop_2.eventDescription}}
+						</p>
+					</div>
 			</div>
 		</md-card-content>
 	</md-card>
