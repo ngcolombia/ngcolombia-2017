@@ -7,7 +7,7 @@ export const mainConferenceData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		null,
 		'Juan Herrera',
-		null),
+		'./assets/img/profiles/juan_herrera.jpg'),
 	new EventSchedule(
 		'2:30 PM',
 		'3:00 PM',
@@ -87,7 +87,7 @@ export const mainConferenceData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		null,
 		'Juan Herrera',
-		null),
+		'./assets/img/profiles/juan_herrera.jpg'),
 	new EventSchedule(
 		'6:00 PM',
 		null,
@@ -95,44 +95,10 @@ export const mainConferenceData: EventSchedule[] = [
 		// tslint:disable-next-line:max-line-length
 		null,
 		null,
-		null),
-	new EventSchedule(
-		'7:00 PM',
-		null,
-		'Special Dinner',
-		// tslint:disable-next-line:max-line-length
-		'Yuxi + Speakers + Organizers',
-		null,
-		null),
-	new EventSchedule(
-		'9:00 PM',
-		null,
-		'🎊 After Party 🎉',
-		// tslint:disable-next-line:max-line-length
-		null,
-		null,
-		null),
+		null)
 ];
 
 export const workshopData: EventSchedule[] = [
-	new EventSchedule(
-		'7:00 AM',
-		'8:00 AM',
-		null,
-		// tslint:disable-next-line:max-line-length
-		null,
-		null,
-		null,
-		true,
-		new EventSchedule(
-			'7:00 AM',
-			'3:00 PM',
-			'Registration',
-			// tslint:disable-next-line:max-line-length
-			null,
-			'Josue Gutierrez',
-			'./assets/img/profiles/josue_gutierrez.jpg')
-		),
 	new EventSchedule(
 		'8:00 AM',
 		'10:00 AM',
