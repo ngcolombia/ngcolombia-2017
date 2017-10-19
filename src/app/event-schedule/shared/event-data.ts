@@ -1,89 +1,5 @@
 import { EventSchedule } from './event-schedule.model';
-export const eventData: EventSchedule[] = [
-	new EventSchedule(
-		'7:00 AM',
-		'8:00 AM',
-		'Registration',
-		// tslint:disable-next-line:max-line-length
-		null,
-		// 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim arcu pulvinar vulputate scelerisque. Quisque sed elit vel quam rhoncus mollis. Praesent quis elit at ligula hendrerit luctus id ut magna. Curabitur nec turpis a justo pharetra finibus. Sed porta felis volutpat risus luctus',
-		'NG-Colombia',
-		null,
-		false),
-	new EventSchedule(
-		'8:00 AM',
-		'10:00 M',
-		'Workshop #1: \" Event1\"',
-		// tslint:disable-next-line:max-line-length
-		null,
-		'Josue Gutierrez',
-		'./assets/img/profiles/josue_gutierrez.jpg',
-		true,
-		new EventSchedule(
-			'8:00 AM',
-			'10:00 M',
-			'Workshop #1: \" Angular from zero to hero\"',
-			// tslint:disable-next-line:max-line-length
-			'In this workshop we\'re going to learn some Angular concepts and we\'re going to build an application from scratch to manipulate data',
-			'Josue Gutierrez',
-			'./assets/img/profiles/josue_gutierrez.jpg'),
-		new EventSchedule(
-			'8:00 AM',
-			'10:00 M',
-			'Workshop #2: \"RxJS\"',
-			// tslint:disable-next-line:max-line-length
-			'TBD',
-			'Jorge Cano',
-			'./assets/img/profiles/jorge_cano.jpg')
-		),
-	new EventSchedule(
-		'8:00 AM',
-		'10:00 M',
-		'Workshop #1: \" Angular from zero to hero\"',
-		// tslint:disable-next-line:max-line-length
-		'In this workshop we\'re going to learn some Angular concepts and we\'re going to build an application from scratch to manipulate data',
-		'Josue Gutierrez',
-		'./assets/img/profiles/josue_gutierrez.jpg'),
-	new EventSchedule(
-		'8:00 AM',
-		'10:00 M',
-		'Workshop #2: \"RxJS\"',
-		// tslint:disable-next-line:max-line-length
-		'TBD',
-		'Jorge Cano',
-		'./assets/img/profiles/jorge_cano.jpg'),
-	new EventSchedule(
-		'10:00 AM',
-		'10:20 AM',
-		'Break',
-		// tslint:disable-next-line:max-line-length
-		null,
-		null,
-		null),
-	new EventSchedule(
-		'10:20 AM',
-		'12:00 M',
-		'Workshop #1 Continuation',
-		// tslint:disable-next-line:max-line-length
-		'',
-		'Josue Gutierrez',
-		'./assets/img/profiles/josue_gutierrez.jpg'),
-	new EventSchedule(
-		'10:20 AM',
-		'12:00 M',
-		'Workshop #2 Continuation',
-		// tslint:disable-next-line:max-line-length
-		null,
-		'Jorge Cano',
-		'./assets/img/profiles/jorge_cano.jpg'),
-	new EventSchedule(
-		'12:00 M',
-		'2:00 PM',
-		'Lunch',
-		// tslint:disable-next-line:max-line-length
-		'',
-		null,
-		null),
+export const mainConferenceData: EventSchedule[] = [
 	new EventSchedule(
 		'2:10 PM',
 		'2:30 PM',
@@ -197,3 +113,59 @@ export const eventData: EventSchedule[] = [
 		null,
 		null),
 ];
+
+export const workshopData: EventSchedule[] = [
+	new EventSchedule(
+		'8:00 AM',
+		'10:00 M',
+		null,
+		// tslint:disable-next-line:max-line-length
+		null,
+		null,
+		null,
+		true,
+		new EventSchedule(
+			'8:00 AM',
+			'10:00 M',
+			'\"Angular from zero to hero\": Part I',
+			// tslint:disable-next-line:max-line-length
+			'In this workshop we\'re going to learn some Angular concepts and we\'re going to build an application from scratch to manipulate data',
+			'Josue Gutierrez',
+			'./assets/img/profiles/josue_gutierrez.jpg'),
+		new EventSchedule(
+			'8:00 AM',
+			'10:00 M',
+			'\"RxJS\": Part I',
+			// tslint:disable-next-line:max-line-length
+			'TBD',
+			'Jorge Cano',
+			'./assets/img/profiles/jorge_cano.jpg')
+	),
+	new EventSchedule(
+		'10:20 AM',
+		'12:00 M',
+		null,
+		// tslint:disable-next-line:max-line-length
+		null,
+		null,
+		null,
+		true,
+		new EventSchedule(
+			'10:20 AM',
+			'12:00 M',
+			'\"Angular from zero to hero\": Part II',
+			// tslint:disable-next-line:max-line-length
+			null,
+			'Josue Gutierrez',
+			'./assets/img/profiles/josue_gutierrez.jpg'),
+		new EventSchedule(
+			'10:00 AM',
+			'10:20 AM',
+			'\"RxJS\": Part II',
+			// tslint:disable-next-line:max-line-length
+			null,
+			'Jorge Cano',
+			'./assets/img/profiles/jorge_cano.jpg')
+		)
+	];
+

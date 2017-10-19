@@ -28,3 +28,21 @@
 	font-size: 16px;
 	font-weight: bold;
 }
+
+.main-conference{
+	font-size: 30px;
+    line-height: 45px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+	position: relative;
+	text-align: center;
+	color: map-get($md-ngcolombia, 500);
+}
+
+.break{
+	display: block;
+    font-size: 18px;
+    margin: 30px auto 60px;
+    text-align: center;
+}
