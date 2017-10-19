@@ -1,13 +1,4 @@
-@import '~@angular/material/theming';
 @import '../../style/palette';
-@include mat-core();
-$primary: mat-palette($md-ngcolombiablue);
-$accent:  mat-palette($md-ngcolombia);
-$warn:  mat-palette($mat-red, 600, 100, 800);
-$primary-color: mat-color($accent, 900);
-$ngcolombia-app-theme: mat-light-theme($primary, $accent, $warn);
-
-@include angular-material-theme($ngcolombia-app-theme);
 
 .purchaseform-container{
   position: absolute;
