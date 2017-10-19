@@ -116,8 +116,26 @@ export const mainConferenceData: EventSchedule[] = [
 
 export const workshopData: EventSchedule[] = [
 	new EventSchedule(
+		'7:00 AM',
 		'8:00 AM',
-		'10:00 M',
+		null,
+		// tslint:disable-next-line:max-line-length
+		null,
+		null,
+		null,
+		true,
+		new EventSchedule(
+			'7:00 AM',
+			'3:00 PM',
+			'Registration',
+			// tslint:disable-next-line:max-line-length
+			null,
+			'Josue Gutierrez',
+			'./assets/img/profiles/josue_gutierrez.jpg')
+		),
+	new EventSchedule(
+		'8:00 AM',
+		'10:00 AM',
 		null,
 		// tslint:disable-next-line:max-line-length
 		null,
@@ -126,7 +144,7 @@ export const workshopData: EventSchedule[] = [
 		true,
 		new EventSchedule(
 			'8:00 AM',
-			'10:00 M',
+			'10:00 AM',
 			'\"Angular from zero to hero\": Part I',
 			// tslint:disable-next-line:max-line-length
 			'In this workshop we\'re going to learn some Angular concepts and we\'re going to build an application from scratch to manipulate data',
@@ -134,7 +152,7 @@ export const workshopData: EventSchedule[] = [
 			'./assets/img/profiles/josue_gutierrez.jpg'),
 		new EventSchedule(
 			'8:00 AM',
-			'10:00 M',
+			'10:00 AM',
 			'\"RxJS\": Part I',
 			// tslint:disable-next-line:max-line-length
 			'TBD',
