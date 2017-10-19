@@ -1,0 +1,70 @@
+@import '~@angular/material/theming';
+@import '../../style/palette';
+@include mat-core();
+$primary: mat-palette($md-ngcolombiablue);
+$accent:  mat-palette($md-ngcolombia);
+$warn:  mat-palette($mat-red, 600, 100, 800);
+$primary-color: mat-color($accent, 900);
+$ngcolombia-app-theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($ngcolombia-app-theme);
+
+.purchaseform-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline-flex;
+
+  .pane{
+    display: flex;
+    flex: 50%;
+    vertical-align: top;
+    height: 100%;
+  }
+  .left-pane{
+    align-items: center;
+    justify-content: center;
+    background-color: $pf-leftpane-bg;
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    img {
+      width: 32%;
+
+    }
+
+  }
+  .right-pane{
+    background-color: $pf-rightpane-bg-start;
+    background: linear-gradient(to right, $pf-rightpane-bg-start 0%, $pf-rightpane-bg-end 100%);
+    box-sizing: border-box;
+    padding: 6.5%;
+    color: $pf-text-color;
+    display: block;
+    width: 100%;
+
+    div {
+      width: 100%;
+    }
+
+    .welcome-text{
+      line-height: 1.2em;
+
+      strong {
+        color: $pf-text-color;
+      }
+    }
+    
+    .full-width {
+      width: 100%;
+      
+      input {
+        width: 100%;
+      }
+    }
+}
+
+}

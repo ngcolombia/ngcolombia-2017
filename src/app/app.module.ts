@@ -3,12 +3,16 @@ import { EventSchedule } from './event-schedule/shared/event-schedule.model';
 import { SpeakerService } from './speakers/speaker.service';
 import { CountdownService } from './countdown/countdown.service';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 // tslint:disable-next-line:max-line-length
-import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule } from '@angular/material';
+import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
+
+
+import { FeatureRoutingModule } from "./app.routes";
 
 import { AppComponent } from './app.component';
 import { CountdownComponent } from './countdown/countdown.component';
@@ -30,6 +34,8 @@ import { PricingComponent } from './pricing/pricing.component';
 import { EventScheduleComponent } from './event-schedule/event-schedule.component';
 import { CommunityPartnersComponent } from './community-partners/community-partners.component';
 import { PhotographerCreditLinkComponent } from './photographer-credit-link/photographer-credit-link.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 
 @NgModule({
 	declarations: [
@@ -52,7 +58,9 @@ import { PhotographerCreditLinkComponent } from './photographer-credit-link/phot
 		PricingComponent,
 		EventScheduleComponent,
 		CommunityPartnersComponent,
-		PhotographerCreditLinkComponent
+		PhotographerCreditLinkComponent,
+		PagenotfoundComponent,
+		PurchaseformComponent
 	],
 	imports: [
 		MdButtonModule,
@@ -62,9 +70,13 @@ import { PhotographerCreditLinkComponent } from './photographer-credit-link/phot
 		MatCardModule,
 		MdIconModule,
 		FlexLayoutModule,
+		// NoConflictStyleCompatibilityMode,
 		HttpModule,
 		BrowserAnimationsModule,
-		BrowserModule
+		BrowserModule,
+		FeatureRoutingModule,
+		FormsModule,
+		ReactiveFormsModule
 	],
 	entryComponents: [ SpeakerDetailComponent ],
 	providers: [ CountdownService, SpeakerService, EventScheduleService, MdIconRegistry ],
