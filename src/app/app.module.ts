@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 // tslint:disable-next-line:max-line-length
-import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode } from '@angular/material';
+import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode,MdFormFieldModule, MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
@@ -71,6 +71,8 @@ import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 		MdIconModule,
 		FlexLayoutModule,
 		// NoConflictStyleCompatibilityMode,
+		MdFormFieldModule,
+		MdInputModule,
 		HttpModule,
 		BrowserAnimationsModule,
 		BrowserModule,

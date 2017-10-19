@@ -36,6 +36,7 @@
     color: $pf-text-color;
     display: block;
     width: 100%;
+    overflow-y: auto;
 
     div {
       width: 100%;
@@ -43,10 +44,64 @@
 
     .welcome-text{
       line-height: 1.2em;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      word-spacing: 0.09em;
 
       strong {
         color: $pf-text-color;
+        font-size: 1.1em;
       }
+    }
+
+    .form-container{
+      margin-top: 30px;
+      
+      /deep/ .mat-form-field {
+        margin: 12px auto;
+        .mat-error {
+          color: $pf-leftpane-bg;
+          font-size: 11px;
+          letter-spacing: 0.04em;
+        }
+        .mat-form-field-placeholder {
+          color: $pf-input-color;
+          letter-spacing: 0.07em;
+          word-spacing: 0.2em;
+          font-size: 14px;
+        }
+        .mat-form-field-underline, .mat-form-field-ripple {
+          background-color: $pf-input-color;
+        }
+        &.mat-focused .mat-form-field-placeholder {
+          color: $pf-focused-input-color;
+        }
+        &.mat-focused .mat-form-field-underline, &.mat-focused .mat-form-field-ripple {
+          background-color: $pf-focused-input-color;
+        }
+      }
+      button[type="submit"] {
+        background: none;
+        background-color: #5e91a9;
+        border: 0;
+        padding: 14px 24px;
+        border-radius: 20px;
+        font-weight: bold;
+        color: #FFF;
+        float: right;
+        margin-top: 27px;
+        letter-spacing: 0.05em;
+        box-shadow: 2px 3px 21px 0px rgba(0,0,0,0.65);
+        transition: all 0.4s;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: none;
+          transform: translateX(-1px);
+          transition: all 0.4s;
+        }
+      }
+      
     }
     
     .full-width {

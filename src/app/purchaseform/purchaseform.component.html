@@ -12,20 +12,20 @@
       </p>
     </div>
     <div class="form-container">
-      <form>
-        <p>
+      <form (ngSubmit)="onSubmit()">
+        <div>
           <md-form-field class="full-width">
-            <input mdInput placeholder="First name">
-            <md-error *ngIf="emailFormControl.hasError('required')">
-                Name is
-                <strong>required</strong>
-              </md-error>
+            <input [(ngModel)]="attendantInformation.fullName" name="fullName" mdInput placeholder="FULL NAME" [formControl]="fullNameFormControl" >
+            <md-error *ngIf="fullNameFormControl.hasError('required')">
+              Name is
+              <strong>required</strong>
+            </md-error>
           </md-form-field>
-        </p>
+        </div>
 
-        <p>
+        <div>
           <md-form-field class="full-width">
-            <input mdInput placeholder="Email" [formControl]="emailFormControl">
+            <input [(ngModel)]="attendantInformation.email" name="email" mdInput placeholder="EMAIL" [formControl]="emailFormControl">
             <md-error *ngIf="emailFormControl.hasError('pattern')">
               Please enter a valid email address
             </md-error>
@@ -34,7 +34,41 @@
               <strong>required</strong>
             </md-error>
           </md-form-field>
-        </p>
+        </div>
+
+        <div>
+          <md-form-field class="full-width">
+            <input [(ngModel)]="attendantInformation.emailConfirmation" name="emailConfirmation" mdInput placeholder="EMAIL CONFIRMATION" [formControl]="emailConfirmFormControl" [disabled]="!emailFormControl.valid">
+            <md-error *ngIf="emailConfirmFormControl.hasError('pattern')">
+              Please enter a valid email address
+            </md-error>
+            <md-error *ngIf="emailConfirmFormControl.hasError('required')">
+              Email is
+              <strong>required</strong>
+            </md-error>
+            <md-error *ngIf=" emailConfirmFormControl.valid && (attendantInformation.email !== attendantInformation.emailConfirmation)">
+                Email must
+                <strong>match</strong>
+              </md-error>
+          </md-form-field>
+        </div>
+        <div>
+          <md-form-field class="full-width">
+            <input [(ngModel)]="attendantInformation.idNumber" name="idNumber" mdInput placeholder="I.D. NUMBER" [formControl]="idNumberFormControl">
+            <md-error *ngIf="idNumberFormControl.hasError('required')">
+              ID number is
+              <strong>required</strong>
+            </md-error>
+          </md-form-field>
+        </div>
+        <div>
+          <md-form-field class="full-width">
+            <input [(ngModel)]="attendantInformation.phone" name="phone" type="tel" mdInput placeholder="PHONE">
+          </md-form-field>
+        </div>
+        <div class="captcha">HERE GOES CAPTCHA</div>
+        <button type="submit" class="btn">GET TICKETS</button>
+        <!-- <button type="submit" class="btn">GET TICKETS</button> -->
       </form>
     </div>
   </div>
