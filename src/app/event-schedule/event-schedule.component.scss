@@ -22,6 +22,10 @@
 	font-size: 20px;
 }
 
+.center{
+	text-align: center;
+}
+
 .event-facilitator {
 	color: map-get($md-ngcolombiablue, 900);
 	margin: 0;
@@ -45,4 +49,8 @@
     font-size: 18px;
     margin: 30px auto 60px;
     text-align: center;
+}
+
+.highlighted {
+	background-color: rgba(121, 62, 106, 0.1);
 }
