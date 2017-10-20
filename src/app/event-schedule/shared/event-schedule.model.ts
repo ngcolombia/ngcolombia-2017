@@ -1,3 +1,4 @@
+
 export class EventSchedule {
 	constructor(
 		public startingTime: string,
@@ -5,6 +6,9 @@ export class EventSchedule {
 		public eventName: string,
 		public eventDescription: string,
 		public facilitator: string,
-		public imgUrl: string
+		public imgUrl: string,
+		public isWorkshop: boolean = false,
+		public workshop_1: EventSchedule = null,
+		public workshop_2: EventSchedule = null
 	) { }
 }

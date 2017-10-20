@@ -10,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventScheduleComponent implements OnInit {
 
-	$schedule: Observable<EventSchedule[]>;
+	$mainConferenceSchedule: Observable<EventSchedule[]>;
+	$workshopsSchedule: Observable<EventSchedule[]>;
 
 	constructor(private service: EventScheduleService) {
-		this.$schedule = service.getSchedule();
+		this.$mainConferenceSchedule = service.getMainConferenceSchedule();
+		this.$workshopsSchedule = service.getWorkshopsSchedule();
 	}
 
 	ngOnInit() {

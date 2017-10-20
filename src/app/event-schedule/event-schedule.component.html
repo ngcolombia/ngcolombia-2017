@@ -1,23 +1,55 @@
 <div class="container">
 	<h2 class="section-title">Event Schedule</h2>
 	<h3 class="section-sub-title">Don't Miss a Topic on the Event</h3>
-	<md-card *ngFor='let event of $schedule | async' class="event-spot">
-		<md-card-content>
-			<div class="event-content" fxLayout="row" fxLayoutWrap fxFill>
-				<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
-						{{event.startingTime}} - {{event.endingTime}}
-				</div>
-				<div class="event-image" fxFlex="10" fxFlex.sm="20" fxFlex.xs="30">
-					<img *ngIf="event.imgUrl" src="{{event.imgUrl}}" alt="" width="58">
-				</div>
-				<div class="event-information" fxFlex="80" fxFlex.sm="80" fxFlex.xs="70" >
-					<div class="event-facilitator">{{event.facilitator}}</div>
-					<h4 class="event-name">{{event.eventName}}</h4>
+	<br>
+	<h1 class="main-conference">WORKSHOPS</h1>
+	<div class="workshop-item" *ngFor='let event of $workshopsSchedule | async, let i = index' fxLayout="row" fxLayoutWrap fxFill>
+		<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
+				{{event.startingTime}} - {{event.endingTime}}
+		</div>
+		<md-card class="event-spot" fxFlex="45" fxFlex.xs="50" fxFlex.sm="50">
+			<md-card-content>
+					<img *ngIf="event.imgUrl" src="{{event.workshop_1.imgUrl}}" alt="" width="58">
+					<div class="event-facilitator">{{event.workshop_1.facilitator}}</div>
+					<h4 class="event-name">{{event.workshop_1.eventName}}</h4>
 					<p class="event-decription">
-						{{event.eventDescription}}
+						{{event.workshop_1.eventDescription}}
 					</p>
+				
+			</md-card-content>
+		</md-card>
+		<md-card class="event-spot" fxFlex="45" fxFlex.xs="50" fxFlex.sm="50">
+			<md-card-content>
+					<img *ngIf="event.imgUrl" src="{{event.workshop_2.imgUrl}}" alt="" width="58">
+					<div class="event-facilitator">{{event.workshop_2.facilitator}}</div>
+					<h4 class="event-name">{{event.workshop_2.eventName}}</h4>
+					<p class="event-decription">
+						{{event.workshop_2.eventDescription}}
+					</p>
+			</md-card-content>
+		</md-card>
+		<h2 *ngIf="i == 0" class="break" >BREAK</h2>
+	</div>
+	<h2 class="break" >LUNCH</h2>
+	<h1 class="main-conference" >MAIN CONFERENCE</h1>
+	<md-card *ngFor='let event of $mainConferenceSchedule | async' class="event-spot">
+			<md-card-content>
+				<div class="event-content" fxLayout="row" fxLayoutWrap fxFill >
+					<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
+							{{event.startingTime}} - {{event.endingTime}}
+					</div>
+					<div class="event-image" fxFlex="10" fxFlex.sm="20" fxFlex.xs="30">
+						<img *ngIf="event.imgUrl" src="{{event.imgUrl}}" alt="" width="58">
+					</div>
+					<div class="event-information" fxFlex="80" fxFlex.sm="80" fxFlex.xs="70" >
+						<div class="event-facilitator">{{event.facilitator}}</div>
+						<h4 class="event-name">{{event.eventName}}</h4>
+						<p class="event-decription">
+							{{event.eventDescription}}
+						</p>
+					</div>
 				</div>
-			</div>
-		</md-card-content>
-	</md-card>
+				
+			</md-card-content>
+		</md-card>
 </div>
