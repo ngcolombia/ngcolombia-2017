@@ -10,6 +10,7 @@ import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCar
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
+import { RecaptchaModule, RecaptchaLoaderService  } from 'ng2-recaptcha';
 
 
 import { FeatureRoutingModule } from "./app.routes";
@@ -70,7 +71,6 @@ import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 		MatCardModule,
 		MdIconModule,
 		FlexLayoutModule,
-		// NoConflictStyleCompatibilityMode,
 		MdFormFieldModule,
 		MdInputModule,
 		HttpModule,
@@ -78,10 +78,19 @@ import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 		BrowserModule,
 		FeatureRoutingModule,
 		FormsModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		RecaptchaModule.forRoot()
 	],
 	entryComponents: [ SpeakerDetailComponent ],
-	providers: [ CountdownService, SpeakerService, EventScheduleService, MdIconRegistry ],
+	providers: [ CountdownService,
+		SpeakerService,
+		EventScheduleService,
+		MdIconRegistry,
+		{
+      provide: RecaptchaLoaderService,
+      useValue: new RecaptchaLoaderService("en"),
+    }
+	],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule { }
