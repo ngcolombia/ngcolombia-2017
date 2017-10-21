@@ -1,5 +1,20 @@
 @import '../../style/palette';
 
+/* Purchase form color variables */
+
+$pf-leftpane-bg: #5e91a9;
+$pf-rightpane-bg: #1d2e3e;
+$pf-rightpane-bg-start: #1d2e3e;
+$pf-rightpane-bg-end: #30465c;
+$pf-text-color: #ffffff;
+$pf-input-color: #7d8994;
+$pf-focused-input-color: #ffffff;
+$pf-selected-items-outline-color: #5e91a9;
+$pf-selected-items-text-color: #ffffff;
+$pf-selected-items-value-color: #5e91a9;
+$pf-submit-button-bg: #5e91a9;
+$pf-error-text-color: #a9389d;
+
 .purchaseform-container{
   position: absolute;
   top: 0;
@@ -36,7 +51,8 @@
     background: radial-gradient(ellipse at center,  $pf-rightpane-bg-start 0%,$pf-rightpane-bg-end 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pf-rightpane-bg-start', endColorstr='$pf-rightpane-bg-end',GradientType=1 );
     box-sizing: border-box;
-    padding: 6.5%;
+    padding: 6%;
+    padding-top: 3%;
     color: $pf-text-color;
     display: block;
     width: 100%;
@@ -46,11 +62,91 @@
       width: 100%;
     }
 
+    .purchase-item {
+
+      .item-wrapper {
+        border: 1px solid $pf-selected-items-outline-color;
+        width: 80%;
+        min-width: 235px;
+        max-width: 400px;
+        margin: 5px 0;
+        display: inline-block;
+        padding: 9px 8px 6px;
+        box-sizing: border-box;
+        font-weight: bold;
+        letter-spacing: 0.03em;
+        position: relative;
+        line-height: 1em;
+
+        > div {
+          display: inline-block;
+          width: auto;
+          line-height: 1em;
+
+          &.item-value {
+            position: absolute;
+            right: 9px;
+            top: 4px;
+            font-size: 1.5em;
+            font-weight: normal;
+            color: $pf-selected-items-value-color;
+          }
+        }
+      }
+
+      .remove-item {
+        color: $pf-selected-items-outline-color;
+        font-size: 1.3em;
+        margin-left: 5px;
+        display: inline-block;
+        
+        &:hover {
+          cursor: pointer;
+        }
+
+        i {
+          color: $pf-selected-items-outline-color;
+        }
+      }
+    }
+
+    .purchase-total {
+      width: 80%;
+      min-width: 235px;
+      max-width: 400px;
+      margin: 5px 0 15px;
+      display: inline-block;
+      padding: 9px 8px 6px;
+      box-sizing: border-box;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      position: relative;
+      line-height: 1em;
+
+      > div {
+        display: inline-block;
+        width: auto;
+        line-height: 1em;
+        margin-left: 2px;
+        font-size: 1.5em;
+        font-weight: normal;
+
+        &.item-value {
+          position: absolute;
+          right: 5px;
+          top: 6px;
+          font-size: 1.8em;
+          font-weight: normal;
+        }
+      }
+    }
+
     .welcome-text{
       line-height: 1.2em;
       font-size: 15px;
       letter-spacing: 0.06em;
       word-spacing: 0.09em;
+      margin-top: 30px;
 
       strong {
         color: $pf-text-color;
@@ -64,9 +160,13 @@
       /deep/ .mat-form-field {
         margin: 12px auto;
         .mat-error {
-          color: $pf-leftpane-bg;
+          color: $pf-error-text-color;
           font-size: 11px;
           letter-spacing: 0.04em;
+          
+          strong {
+            color: $pf-error-text-color;
+          }
         }
         .mat-form-field-placeholder {
           color: $pf-input-color;
@@ -86,7 +186,7 @@
       }
       button[type="submit"] {
         background: none;
-        background-color: #5e91a9;
+        background-color: $pf-submit-button-bg;
         border: 0;
         padding: 14px 24px;
         border-radius: 20px;

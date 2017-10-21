@@ -3,7 +3,19 @@
     <img src="assets/img/logo-white.svg" alt="ng-colombia logo">
   </div>
   <div class="right-pane pane">
-    <div class="selected-elements"></div>
+    <div class="selected-items">
+      <div class="purchase-item" *ngFor="let item of attendantInformation.tickets, let i = index">
+        <div class="item-wrapper">
+          <div class="item-name">{{purchaseItemsLabels[item.ticketCode].name | uppercase}}</div>
+          <div class="item-value">{{purchaseItemsLabels[item.ticketCode].cost | currency:'USD':true:'2.0-0'}}</div>
+        </div>
+        <span class="remove-item" (click)="removeItem(i)"><i class="fa fa-times-circle"></i></span> 
+      </div>
+      <div class="purchase-total">
+        <div class="item-name">{{'Total' | uppercase}}</div>
+        <div class="item-value">{{purchaseTotal | currency:'USD':true:'2.0-0'}}</div>
+      </div>
+    </div>
     <div class="welcome-text">
       <p>Welcome!
         <br>Thanks for choosing to attend
@@ -16,7 +28,7 @@
         <div>
           <md-form-field class="full-width">
             <!-- <input [(ngModel)]="attendantInformation.fullName" name="fullName" mdInput placeholder="FULL NAME" [formControl]="fullNameFormControl" > -->
-            <input [(ngModel)]="attendantInformation.fullName" name="fullName" mdInput placeholder="FULL NAME" formControlName="fullName">
+            <input [(ngModel)]="attendantInformation.customerName" name="fullName" mdInput placeholder="FULL NAME" formControlName="fullName">
             <md-error *ngIf="attendantInformationForm.get('fullName').hasError('required')">
               Name is
               <strong>required</strong>
@@ -40,7 +52,7 @@
 
         <div>
           <md-form-field class="full-width">
-            <input [(ngModel)]="attendantInformation.emailConfirmation" name="emailConfirmation" mdInput placeholder="EMAIL CONFIRMATION"
+            <input [(ngModel)]="attendantInformation.confirmationEmail" name="emailConfirmation" mdInput placeholder="EMAIL CONFIRMATION"
               formControlName="emailConfirmation">
             <md-error *ngIf="attendantInformationForm.get('emailConfirmation').hasError('required')">
               Email address confirmation is
@@ -57,7 +69,7 @@
         </div>
         <div>
           <md-form-field class="full-width">
-            <input [(ngModel)]="attendantInformation.idNumber" name="idNumber" mdInput placeholder="I.D. NUMBER" formControlName="idNumber">
+            <input [(ngModel)]="attendantInformation.customerId" name="idNumber" mdInput placeholder="I.D. NUMBER" formControlName="idNumber">
             <md-error *ngIf="attendantInformationForm.get('idNumber').hasError('required')">
               ID number is
               <strong>required</strong>
@@ -70,7 +82,7 @@
         </div>
         <div>
           <md-form-field class="full-width">
-            <input [(ngModel)]="attendantInformation.phone" name="phone" type="tel" mdInput placeholder="PHONE" formControlName="phone">
+            <input [(ngModel)]="attendantInformation.customerPhoneNumber" name="phone" type="tel" mdInput placeholder="PHONE" formControlName="phone">
             <md-error *ngIf="attendantInformationForm.get('phone').hasError('required')">
               Phone number is
               <strong>required</strong>
