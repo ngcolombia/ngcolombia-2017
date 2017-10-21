@@ -108,7 +108,7 @@ export class PurchaseformComponent implements OnInit {
 
   onSubmit() {
     if( this.attendantInformationForm && this.captchaIsValid ){
-      //ToDo: submit actions
+      //ToDo: submit actions, formInformation is in this.attendantInformation
     }
   }
 

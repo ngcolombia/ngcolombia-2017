@@ -27,7 +27,6 @@
       <form [formGroup]="attendantInformationForm" (ngSubmit)="onSubmit()">
         <div>
           <md-form-field class="full-width">
-            <!-- <input [(ngModel)]="attendantInformation.fullName" name="fullName" mdInput placeholder="FULL NAME" [formControl]="fullNameFormControl" > -->
             <input [(ngModel)]="attendantInformation.customerName" name="fullName" mdInput placeholder="FULL NAME" formControlName="fullName">
             <md-error *ngIf="attendantInformationForm.get('fullName').hasError('required')">
               Name is
@@ -38,7 +37,6 @@
 
         <div>
           <md-form-field class="full-width">
-            <!-- <input [(ngModel)]="attendantInformation.email" name="email" mdInput placeholder="EMAIL" [formControl]="emailFormControl"> -->
             <input [(ngModel)]="attendantInformation.email" name="email" mdInput placeholder="EMAIL" formControlName="email">
             <md-error *ngIf="attendantInformationForm.get('email').hasError('required')">
               Email address is
