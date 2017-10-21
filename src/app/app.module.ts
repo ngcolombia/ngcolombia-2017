@@ -4,8 +4,9 @@ import { SpeakerService } from './speakers/speaker.service';
 import { CountdownService } from './countdown/countdown.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 // tslint:disable-next-line:max-line-length
-import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule } from '@angular/material';
+import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, MatCheckboxModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
@@ -61,7 +62,9 @@ import { PhotographerCreditLinkComponent } from './photographer-credit-link/phot
 		MatSidenavModule,
 		MatCardModule,
 		MdIconModule,
+		MatCheckboxModule,
 		FlexLayoutModule,
+		FormsModule,
 		HttpModule,
 		BrowserAnimationsModule,
 		BrowserModule

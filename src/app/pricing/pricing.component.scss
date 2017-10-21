@@ -47,7 +47,7 @@ h2.pricing-price {
 		}
 	}
 	&:nth-child(2) {
-		z-index: 6;
+		z-index: 4;
 		.pricing-info-title, h2.pricing-price {
 			color: map-get($md-ngcolombiablue, 600);
 		}
@@ -104,4 +104,11 @@ li.princing-item {
 .pricing-price .currency {
     margin-right: 2px;
     font-size: 10px;
+}
+
+.plan-action{
+	position: relative;
+	text-align: center;
+	margin-top: 40px;
+    padding-top: 40px;
 }
