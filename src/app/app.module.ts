@@ -37,6 +37,8 @@ import { CommunityPartnersComponent } from './community-partners/community-partn
 import { PhotographerCreditLinkComponent } from './photographer-credit-link/photographer-credit-link.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PurchaseformComponent } from './purchaseform/purchaseform.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { PurchaseErrorComponent } from './purchase-error/purchase-error.component';
 
 @NgModule({
 	declarations: [
@@ -61,7 +63,9 @@ import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 		CommunityPartnersComponent,
 		PhotographerCreditLinkComponent,
 		PagenotfoundComponent,
-		PurchaseformComponent
+		PurchaseformComponent,
+		ConfirmationComponent,
+		PurchaseErrorComponent
 	],
 	imports: [
 		MdButtonModule,
@@ -86,10 +90,10 @@ import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 		SpeakerService,
 		EventScheduleService,
 		MdIconRegistry,
-		{
-      provide: RecaptchaLoaderService,
-      useValue: new RecaptchaLoaderService("en"),
-    }
+	// 	{
+    //   provide: RecaptchaLoaderService,
+    //   useValue: new RecaptchaLoaderService("en"),
+    // }
 	],
 	bootstrap: [ AppComponent ]
 })
