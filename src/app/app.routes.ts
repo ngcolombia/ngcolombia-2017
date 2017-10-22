@@ -9,7 +9,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
 	{ path: 'purchase', component: PurchaseformComponent },
-	{ path: 'confirmation', component: ConfirmationComponent },
+	{ path: 'response', component: ConfirmationComponent },
 	{ path: 'purchase-error', component: PurchaseErrorComponent },
 	{ path: '**', component: AppComponent },
 
