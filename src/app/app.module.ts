@@ -1,3 +1,4 @@
+import { TicketCheckoutService } from './shared/services/ticket-checkout.service';
 import { EventScheduleService } from './event-schedule/shared/event-schedule.service';
 import { EventSchedule } from './event-schedule/shared/event-schedule.model';
 import { SpeakerService } from './speakers/speaker.service';
@@ -6,14 +7,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 // tslint:disable-next-line:max-line-length
-import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode,MdFormFieldModule, MdInputModule } from '@angular/material';
+import { MatSnackBarModule, MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode,MdFormFieldModule, MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
 import { RecaptchaModule, RecaptchaLoaderService  } from 'ng2-recaptcha';
 
 
-import { FeatureRoutingModule } from "./app.routes";
+import { FeatureRoutingModule } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { CountdownComponent } from './countdown/countdown.component';
@@ -73,6 +74,7 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		MatTabsModule,
 		MatSidenavModule,
 		MatCardModule,
+		MatSnackBarModule,
 		MdIconModule,
 		FlexLayoutModule,
 		MdFormFieldModule,
@@ -90,6 +92,7 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		SpeakerService,
 		EventScheduleService,
 		MdIconRegistry,
+		TicketCheckoutService,
 	// 	{
     //   provide: RecaptchaLoaderService,
     //   useValue: new RecaptchaLoaderService("en"),

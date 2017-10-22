@@ -1,6 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { environment } from './../../environments/environment.prod';
+import { CheckoutResponse } from './../shared/models/checkout-response.model';
+import { MatSnackBar } from '@angular/material';
+import { TicketCheckout } from './../shared/models/ticket-request.model';
+import { AttendantInformation } from './../shared/models/attendant-information.model';
+import { TicketCheckoutService } from './../shared/services/ticket-checkout.service';
+import { Component, OnInit, ViewChild, ViewContainerRef, ElementRef } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
-import { matchingEmails } from "./validators/validators";
+import { matchingEmails } from './validators/validators';
 
 
 
@@ -11,105 +17,129 @@ const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"
 
 
 @Component({
-  selector: 'app-purchaseform',
-  templateUrl: './purchaseform.component.html',
-  styleUrls: ['./purchaseform.component.scss']
+	selector: 'app-purchaseform',
+	templateUrl: './purchaseform.component.html',
+	styleUrls: ['./purchaseform.component.scss']
 })
 export class PurchaseformComponent implements OnInit {
 
-  attendantInformationForm: FormGroup;
-  captchaIsValid = false;
-  purchaseTotal;
+	attendantInformationForm: FormGroup;
+	captchaIsValid = false;
+	purchaseTotal;
+	checkoutInformation: CheckoutResponse;
+	loading = false;
+	recaptchaSiteKey = environment.recaptchaSiteToken;
+	attendantInformation: AttendantInformation = new AttendantInformation('', '', '', '' , '', [], '');
 
-  attendantInformation = {
-    customerId: '',
-    customerName: '',
-    email: '',
-    confirmationEmail: '',
-    customerPhoneNumber: '',
-    tickets: [],
-    tokenCaptcha: ''
-  }
-  
-  purchaseItemsLabels = {
-    'main-conference': {
-      name: 'Main conference',
-      cost: 25,   
-    },
-    'workshop-1': {
-      name: 'Workshop 1',
-      cost: 20,   
-    },
-    'workshop-2': {
-      name: 'Workshop 2',
-      cost: 20,   
-    }
-  }
+	purchaseItemsLabels: any = {
+		'main-conference': {
+			name: 'Main conference',
+			cost: 25,
+		},
+		'workshop-1': {
+			name: 'Workshop 1',
+			cost: 20,
+		},
+		'workshop-2': {
+			name: 'Workshop 2',
+			cost: 20,
+		}
+	};
 
-  constructor() { }
+	private payUFormElement: ElementRef;
+	@ViewChild('payUForm') set payUForm(content: ElementRef) {
+		this.payUFormElement = content;
+		if (this.payUFormElement) {
+			this.payUFormElement.nativeElement.submit();
+		}
+	}
 
-  ngOnInit(): void {
-    
-    if (localStorage.purchaseItems) {
-      let itemsString = localStorage.purchaseItems
-      
-      if( itemsString.indexOf('mc') != -1 ) {
-        this.attendantInformation.tickets.push({ticketCode: 'main-conference'});
-      }
-      if( itemsString.indexOf('w1') != -1 ) {
-        this.attendantInformation.tickets.push({ticketCode: 'workshop-1'});
-      }
-      if( itemsString.indexOf('w2') != -1 ) {
-        this.attendantInformation.tickets.push({ticketCode: 'workshop-2'});
-      }
-      this.calculatePurchaseTotal();
-    } else {
-      // ToDo: redirect user if no  localStorage.purchaseItems
-    }
+	constructor(private ticketCheckoutService: TicketCheckoutService, private snackbar: MatSnackBar) { 
+		localStorage.purchaseItems = 'mcw1';
+	}
 
-    this.attendantInformationForm = new FormGroup({
-      'fullName': new FormControl(this.attendantInformation.customerName, [Validators.required]),
-      'email': new FormControl(this.attendantInformation.email, [
-        Validators.required,
-        Validators.pattern(EMAIL_REGEX)]),
-      'emailConfirmation': new FormControl(this.attendantInformation.confirmationEmail, [
-        Validators.required,
-        Validators.pattern(EMAIL_REGEX)]),
-      'idNumber': new FormControl(this.attendantInformation.customerId, [
-        Validators.required,
-        Validators.pattern(IDNUMBER_REGEX)]),
-      'phone': new FormControl(this.attendantInformation.customerPhoneNumber, [
-        Validators.required,
-        Validators.pattern(PHONE_REGEX)])
-    }, matchingEmails('email', 'emailConfirmation'));
-  }
+	ngOnInit(): void {
 
+		if (localStorage.purchaseItems) {
+			const itemsString = localStorage.purchaseItems;
 
-  calculatePurchaseTotal() {
-    let total = 0;
-    this.attendantInformation.tickets.forEach( (ticket)=>{
-      total += this.purchaseItemsLabels[ticket.ticketCode].cost;
-    });
-    this.purchaseTotal = total;
-  }
+			if (itemsString.indexOf('mc') !== -1) {
+				this.attendantInformation.tickets.push(new TicketCheckout('main-conference'));
+			}
+			if (itemsString.indexOf('w1') !== -1) {
+				this.attendantInformation.tickets.push(new TicketCheckout('workshop-1' ));
+			}
+			if (itemsString.indexOf('w2') !== -1) {
+				this.attendantInformation.tickets.push(new TicketCheckout('workshop-2' ));
+			}
+			this.calculatePurchaseTotal();
+		} else {
+			// ToDo: redirect user if no  localStorage.purchaseItems
+		}
+
+		this.attendantInformationForm = new FormGroup({
+			'fullName': new FormControl(this.attendantInformation.customerName, [Validators.required]),
+			'email': new FormControl(this.attendantInformation.email, [
+				Validators.required,
+				Validators.pattern(EMAIL_REGEX)]),
+			'emailConfirmation': new FormControl(this.attendantInformation.confirmationEmail, [
+				Validators.required,
+				Validators.pattern(EMAIL_REGEX)]),
+			'idNumber': new FormControl(this.attendantInformation.customerId, [
+				Validators.required,
+				Validators.pattern(IDNUMBER_REGEX)]),
+			'phone': new FormControl(this.attendantInformation.customerPhoneNumber, [
+				Validators.required,
+				Validators.pattern(PHONE_REGEX)])
+		}, matchingEmails('email', 'emailConfirmation'));
+	}
 
 
-  removeItem(index) {
-    this.attendantInformation.tickets.splice(index,1);
-    this.calculatePurchaseTotal();
-  }
+	calculatePurchaseTotal() {
+		let total = 0;
+		this.attendantInformation.tickets.forEach((ticket) => {
+			total += this.purchaseItemsLabels[ticket.ticketCode].cost;
+		});
+		this.purchaseTotal = total;
+	}
 
 
-  resolved(captchaResponse: string) {
-    this.captchaIsValid = captchaResponse !== null ? true : false;
-    this.attendantInformation.tokenCaptcha = captchaResponse;
-  }
+	removeItem(index) {
+		this.attendantInformation.tickets.splice(index, 1);
+		this.calculatePurchaseTotal();
+	}
 
 
-  onSubmit() {
-    if( this.attendantInformationForm && this.captchaIsValid ){
-      //ToDo: submit actions, formInformation is in this.attendantInformation
-    }
-  }
+	resolved(captchaResponse: string) {
+		this.captchaIsValid = captchaResponse !== null ? true : false;
+		this.attendantInformation.tokenCaptcha = captchaResponse;
+	}
+
+
+	onSubmit() {
+		if (this.attendantInformationForm && this.captchaIsValid) {
+			this.loading = true;
+			this.ticketCheckoutService.saveCheckout(this.attendantInformation)
+				.subscribe(
+					(response) => {
+						this.checkoutInformation = response;
+						this.loading = false;
+					},
+					(error: any) => {
+						this.loading = false;
+						let message = 'Technical Error, please try again';
+
+						if (error.message) {
+							message = error.message;
+						}
+
+						this.snackbar.open(message, 'Close', {
+							duration: 5000
+						});
+					},
+					() => { this.loading = false; }
+				);
+		}
+	}
 
 }

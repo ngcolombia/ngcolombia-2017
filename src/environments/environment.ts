@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-	production: false
+	production: false,
+	recaptchaSiteToken: '6LefLTUUAAAAAMLeOt5SyjhMNrX50P79CqHzmZju',
+	apiBaseUrl: 'http://ngcolombia-tickets.azurewebsites.net/api'
+
 };

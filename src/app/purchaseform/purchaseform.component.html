@@ -93,11 +93,30 @@
 
           </md-form-field>
         </div>
-        <button type="submit" [disabled]="!captchaIsValid" class="btn">GET TICKETS</button>
+        <button type="submit" [disabled]="!captchaIsValid || loading || checkoutInformation" class="btn">GET TICKETS</button>
         <div class="captcha" [ngClass]="{'not-visible': captchaIsValid}">
-          <recaptcha (resolved)="resolved($event)" theme="light" siteKey="6LdaQTUUAAAAAHe0phhxaTWw5yInUlGLzJ4wOR9P" required></recaptcha>
-        </div>
-      </form>
-    </div>
+          <recaptcha (resolved)="resolved($event)" theme="light" [siteKey]="recaptchaSiteKey" required></recaptcha>
+		</div>
+	  </form>
+	  <div *ngIf="checkoutInformation" class="redirecting">
+		Redirecting to Checkout...
+	  </div>
+	<form *ngIf="checkoutInformation" method="post" action="{{checkoutInformation.actionUrl}}" #payUForm>
+		<input name="merchantId" type="hidden" value="{{checkoutInformation.merchantId}}">
+		<input name="accountId" type="hidden" value="{{checkoutInformation.accountId}}">
+		<input name="description" type="hidden" value="{{checkoutInformation.description}}">
+		<input name="referenceCode" type="hidden" value="{{checkoutInformation.referenceCode}}">
+		<input name="amount" type="hidden" value="{{checkoutInformation.amount}}">
+		<input name="tax" type="hidden" value="{{checkoutInformation.tax}}">
+		<input name="taxReturnBase" type="hidden" value="{{checkoutInformation.taxReturnBase}}">
+		<input name="currency" type="hidden" value="{{checkoutInformation.currency}}">
+		<input name="signature" type="hidden" value="{{checkoutInformation.signature}}">
+		<input name="test" type="hidden" value="{{checkoutInformation.test}}">
+		<input name="buyerEmail" type="hidden" value="{{checkoutInformation.buyerEmail}}">
+		<input name="responseUrl" type="hidden" value="{{checkoutInformation.responseUrl}}">
+		<input name="confirmationUrl" type="hidden" value="{{checkoutInformation.confirmationUrl}}">
+	
+	</form>
+	</div>
   </div>
 </div>
