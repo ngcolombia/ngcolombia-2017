@@ -26,11 +26,13 @@ export class EventScheduleComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	showEventDetail(eventDetail: EventSchedule ): void {
-		this.dialogRef = this.dialog.open(EventScheduleDetailComponent, {
-			data: eventDetail,
-			panelClass: 'eventDetail'
-		});
+	showEventDetail(eventDetail: EventSchedule): void {
+		if (eventDetail.eventDescription) {
+			this.dialogRef = this.dialog.open(EventScheduleDetailComponent, {
+				data: eventDetail,
+				panelClass: 'eventDetail'
+			});
+		}
 	}
 
 }

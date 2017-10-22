@@ -3,9 +3,9 @@ export const mainConferenceData: EventSchedule[] = [
 	new EventSchedule(
 		'2:10 PM',
 		'2:30 PM',
-		'Welcome',
-		// tslint:disable-next-line:max-line-length
-		null,
+		'⭐️ Welcome ⭐️',
+		// tslint:disable-next-line:max-line-length		
+		'The first Angular International Conference in Colombia has arrived and we must kick it off with as it deserves. In this quick introduction we will officially start the conference and get everyone ready for all the great speakers, contents, gifts, surprises and more! 😎',
 		'Juan Herrera',
 		'./assets/img/profiles/juan_herrera.jpg'),
 	new EventSchedule(
@@ -45,7 +45,7 @@ export const mainConferenceData: EventSchedule[] = [
 		'4:20 PM',
 		'Break',
 		// tslint:disable-next-line:max-line-length
-		null,
+		'Let\'s take a break and meet some colleagues! 👩👨 Or you can also enjoy the Yuxi experience! 🎮',
 		null,
 		'./assets/img/snack.svg'),
 	new EventSchedule(
@@ -85,7 +85,7 @@ export const mainConferenceData: EventSchedule[] = [
 		'6:00 PM',
 		'AMA: Ask me anything',
 		// tslint:disable-next-line:max-line-length
-		null,
+		'Literally anything! 👌 All of the speakers will sit in the front just to answer your questions, whatever they are. You can ask open questions or target a particular speaker, it\'s up to you! 😉',
 		'All speakers',
 		'./assets/img/mic.svg'),
 		new EventSchedule(
@@ -93,7 +93,7 @@ export const mainConferenceData: EventSchedule[] = [
 		null,
 		'Closure',
 		// tslint:disable-next-line:max-line-length
-		null,
+		'It\'s time to say goodbye 😢, but not for too long 🖐, we will meet you again in 2018 for sure! 💪',
 		null,
 		null)
 ];
