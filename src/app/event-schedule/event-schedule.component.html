@@ -1,11 +1,11 @@
 <div class="container">
 	<h2 class="section-title">Event Schedule</h2>
-	<h3 class="section-sub-title">Don't Miss a Topic on the Event</h3>
+	<h3 class="section-sub-title">Don't Miss a Topic</h3>
 	<br>
 	<h1 class="main-conference">WORKSHOPS</h1>
 	<div class="registration-item" *ngFor='let event of $registrationSchedule | async' fxLayout="row" fxLayoutWrap fxFill>
 		<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
-			{{event.startingTime}} - {{event.endingTime}}
+			<span>{{event.startingTime}}</span>	 <span *ngIf=event.endingTime >- {{event.endingTime}}</span> 
 		</div>
 		<md-card *ngIf="event" class="event-spot highlighted" fxFlex="90" fxFlex.xs="100" fxFlex.sm="100">
 			<md-card-content>
@@ -16,7 +16,7 @@
 	<br>
 	<div class="workshop-item" *ngFor='let event of $workshopsSchedule | async' fxLayout="row" fxLayoutWrap fxFill>
 		<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
-				{{event.startingTime}} - {{event.endingTime}}
+			<span>{{event.startingTime}}</span>	 <span *ngIf=event.endingTime >- {{event.endingTime}}</span>
 		</div>
 		<md-card *ngIf="event.workshop_1" class="event-spot" fxFlex="45" fxFlex.xs="50" fxFlex.sm="50">
 			<md-card-content>
@@ -41,23 +41,12 @@
 		</md-card>
 	</div>
 	<br>
-	<div class="lunch-item" *ngFor='let event of $lunchSchedule | async' fxLayout="row" fxLayoutWrap fxFill>
-		<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
-			{{event.startingTime}} - {{event.endingTime}}
-		</div>
-		<md-card *ngIf="event" class="event-spot highlighted" fxFlex="90" fxFlex.xs="100" fxFlex.sm="100">
-			<md-card-content>
-					<h4 class="event-name center">{{event.eventName}}</h4>
-			</md-card-content>
-		</md-card>
-	</div>
-	<br>
 	<h1 class="main-conference" >MAIN CONFERENCE</h1>
-	<md-card *ngFor='let event of $mainConferenceSchedule | async, let i = index' [ngClass]="{'highlighted': i===5 ||i ===11}" class="event-spot">
+	<md-card *ngFor='let event of $mainConferenceSchedule | async, let i = index' [ngClass]="{'highlighted': i===5 ||i ===11}" class="event-spot" (click)="showEventDetail(event)">
 		<md-card-content>
 			<div class="event-content" fxLayout="row" fxLayoutWrap fxFill >
 				<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
-						{{event.startingTime}} - {{event.endingTime}}
+					<span>{{event.startingTime}}</span>	 <span *ngIf=event.endingTime >- {{event.endingTime}}</span>
 				</div>
 				<div *ngIf="event.imgUrl" class="event-image" fxFlex="10" fxFlex.sm="20" fxFlex.xs="30">
 					<img src="{{event.imgUrl}}" alt="" width="58">
@@ -65,9 +54,6 @@
 				<div class="event-information" fxFlex="80" fxFlex.sm="80" fxFlex.xs="70" >
 					<div class="event-facilitator">{{event.facilitator}}</div>
 					<h4 class="event-name">{{event.eventName}}</h4>
-					<p class="event-decription">
-						{{event.eventDescription}}
-					</p>
 				</div>
 			</div>
 			

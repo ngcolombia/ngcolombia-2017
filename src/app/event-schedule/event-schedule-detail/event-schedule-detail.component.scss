@@ -1,0 +1,26 @@
+
+.mat-dialog-title{
+    color: #7d1a65;
+}
+
+
+md-dialog-content{
+    display: block;
+    margin: 0;
+    &:after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.mat-dialog-content{    
+    padding: 0 0;
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .mat-dialog-content{    
+        overflow: hidden;
+    }
+}

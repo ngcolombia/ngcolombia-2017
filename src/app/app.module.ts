@@ -31,6 +31,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { EventScheduleComponent } from './event-schedule/event-schedule.component';
 import { CommunityPartnersComponent } from './community-partners/community-partners.component';
 import { PhotographerCreditLinkComponent } from './photographer-credit-link/photographer-credit-link.component';
+import { EventScheduleDetailComponent } from './event-schedule/event-schedule-detail/event-schedule-detail.component';
 
 @NgModule({
 	declarations: [
@@ -53,7 +54,8 @@ import { PhotographerCreditLinkComponent } from './photographer-credit-link/phot
 		PricingComponent,
 		EventScheduleComponent,
 		CommunityPartnersComponent,
-		PhotographerCreditLinkComponent
+		PhotographerCreditLinkComponent,
+		EventScheduleDetailComponent
 	],
 	imports: [
 		MdButtonModule,
@@ -69,7 +71,7 @@ import { PhotographerCreditLinkComponent } from './photographer-credit-link/phot
 		BrowserAnimationsModule,
 		BrowserModule
 	],
-	entryComponents: [ SpeakerDetailComponent ],
+	entryComponents: [ SpeakerDetailComponent, EventScheduleDetailComponent ],
 	providers: [ CountdownService, SpeakerService, EventScheduleService, MdIconRegistry ],
 	bootstrap: [ AppComponent ]
 })
