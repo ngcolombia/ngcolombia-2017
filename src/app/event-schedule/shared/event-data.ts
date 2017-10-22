@@ -67,7 +67,7 @@ export const mainConferenceData: EventSchedule[] = [
 	new EventSchedule(
 		'5:10 PM',
 		'5:30 PM',
-		'TBD',
+		'Advanced Components and Directives',
 		// tslint:disable-next-line:max-line-length
 		null,
 		'Israel Guzman',
@@ -101,7 +101,7 @@ export const mainConferenceData: EventSchedule[] = [
 export const workshopData: EventSchedule[] = [
 	new EventSchedule(
 		'8:00 AM',
-		'12:00 AM',
+		'12:00 PM',
 		null,
 		// tslint:disable-next-line:max-line-length
 		null,
@@ -110,18 +110,18 @@ export const workshopData: EventSchedule[] = [
 		true,
 		new EventSchedule(
 			'8:00 AM',
-			'12:00 AM',
+			'12:00 PM',
 			'Angular: from zero to hero',
 			// tslint:disable-next-line:max-line-length
-			'In this workshop we\'re going to learn some Angular concepts and we\'re going to build an application from scratch to manipulate data like a pro',
+			'Learn the most important Angular concepts by building an application from scratch. In this workshop we will dive through the most important Angular topics such as components, directives, templates, binding, and much more. By the end of the workshop you will understand Angular\'s most relevant notions so you can manipulate data like a pro.',
 			'Josue Gutierrez',
 			'./assets/img/profiles/josue_gutierrez.jpg'),
 		new EventSchedule(
 			'8:00 AM',
-			'12:00 AM',
-			'RxJS Like a Boss',
+			'12:00 PM',
+			'RxJS like a Boss',
 			// tslint:disable-next-line:max-line-length
-			'RxJS is a library that has become very popular lately. Join us to meet the RxJS world and become a boss with it.',
+			'RxJS is a library for reactive programming using Observables. It offers a powerful, functional approach for dealing with events. Join us in this workshop to meet the asynchronous world and take full advantage of the most important operators this library offers so you can start coding like a boss not just in Angular.',
 			'Jorge Cano',
 			'./assets/img/profiles/jorge_cano.jpg')
 	)
