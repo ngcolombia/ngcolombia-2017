@@ -8,21 +8,4 @@ import { MdSidenav } from '@angular/material';
 })
 export class AppComponent {
 
-	hideBackToTop = true;
-
-	@ViewChild(MdSidenav) sidenav: MdSidenav;
-
-	closeNav(selected: boolean): void {
-		this.sidenav.close();
-	}
-
-	openNav(selected: boolean): void {
-		this.sidenav.open();
-	}
-
-	@HostListener('window:scroll', [])
-	onWindowScroll() {
-		const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-		this.hideBackToTop = currentScrollPosition < 200;
-	}
 }

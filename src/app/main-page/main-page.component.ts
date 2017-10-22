@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { MdSidenav } from '@angular/material';
+import { Component, ViewChild, HostListener } from '@angular/core';
 
 @Component({
 	selector: 'app-main-page',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
 	styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-	constructor() { }
+
+	hideBackToTop = true;
+
+	@ViewChild(MdSidenav) sidenav: MdSidenav;
+
+	closeNav(selected: boolean): void {
+		this.sidenav.close();
+	}
+
+	openNav(selected: boolean): void {
+		this.sidenav.open();
+	}
+
+	@HostListener('window:scroll', [])
+	onWindowScroll() {
+		const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+		this.hideBackToTop = currentScrollPosition < 200;
+	}
 }

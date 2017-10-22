@@ -99,7 +99,7 @@
 		</div>
 	  </form>
 	  <div *ngIf="checkoutInformation" class="redirecting">
-		Redirecting to Checkout...
+		Redirecting to checkout...
 	  </div>
 	<form *ngIf="checkoutInformation" method="post" action="{{checkoutInformation.actionUrl}}" #payUForm>
 		<input name="merchantId" type="hidden" value="{{checkoutInformation.merchantId}}">

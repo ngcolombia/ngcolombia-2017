@@ -4,11 +4,10 @@ import { EventSchedule } from './event-schedule/shared/event-schedule.model';
 import { SpeakerService } from './speakers/speaker.service';
 import { CountdownService } from './countdown/countdown.service';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 // tslint:disable-next-line:max-line-length
-import { MatSnackBarModule, MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode,MdFormFieldModule, MdInputModule } from '@angular/material';
+import { MatCheckboxModule, MatSnackBarModule, MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode,MdFormFieldModule, MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
@@ -64,7 +63,7 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		PricingComponent,
 		EventScheduleComponent,
 		CommunityPartnersComponent,
-		EventScheduleDetailComponent
+		EventScheduleDetailComponent,
 		PhotographerCreditLinkComponent,
 		PagenotfoundComponent,
 		PurchaseformComponent,
@@ -92,16 +91,12 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		ReactiveFormsModule,
 		RecaptchaModule.forRoot()
 	],
-	entryComponents: [ SpeakerDetailComponent ],
+	entryComponents: [ SpeakerDetailComponent, EventScheduleComponent ],
 	providers: [ CountdownService,
 		SpeakerService,
 		EventScheduleService,
 		MdIconRegistry,
-		TicketCheckoutService,
-	// 	{
-    //   provide: RecaptchaLoaderService,
-    //   useValue: new RecaptchaLoaderService("en"),
-    // }
+		TicketCheckoutService
 	],
 	bootstrap: [ AppComponent ]
 })

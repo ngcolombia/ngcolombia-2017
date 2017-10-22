@@ -1,27 +1,47 @@
-<section class="slide" id="banner">
-	<app-main-banner></app-main-banner>
-</section>
-<section id="intro">
-	<app-about-us></app-about-us>
-</section>
-<section id="speakers" class="bg-overlay">
-	<app-speakers></app-speakers>
-</section>
-<section id="event-schedule">
-	<app-event-schedule></app-event-schedule>
-</section>
-<section id="pricing">
-	<app-pricing></app-pricing>
-</section>
-<section id="venu-info">
-	<app-venu-information></app-venu-information>
-</section>
-<section id="location-map">
-	<app-location-map></app-location-map>
-</section>
-<section id="newsletter" class="bg-pattern">
-	<app-newsletter-form></app-newsletter-form>
-</section>
-<!-- <section id="community-partners">
-	<app-community-partners></app-community-partners>
-</section> -->
+ <md-sidenav-container>
+	<md-sidenav #sidenav class="sidenav">
+		<app-logo></app-logo>
+		<app-nav-menu (onMenuItemSelected)="closeNav($event)" menuColor="accent"></app-nav-menu>
+	</md-sidenav>
+	<header>
+		<app-header (onToggleNav)="openNav($event)"></app-header>
+	</header>
+	<main>
+		<section class="slide" id="banner">
+			<app-main-banner></app-main-banner>
+		</section>
+		<section id="intro">
+			<app-about-us></app-about-us>
+		</section>
+		<section id="speakers" class="bg-overlay">
+			<app-speakers></app-speakers>
+		</section>
+		<section id="event-schedule">
+			<app-event-schedule></app-event-schedule>
+		</section>
+		<section id="pricing">
+			<app-pricing></app-pricing>
+		</section>
+		<section id="venu-info">
+			<app-venu-information></app-venu-information>
+		</section>
+		<section id="location-map">
+			<app-location-map></app-location-map>
+		</section>
+		<section id="newsletter" class="bg-pattern">
+			<app-newsletter-form></app-newsletter-form>
+		</section>
+		<!-- <section id="community-partners">
+			<app-community-partners></app-community-partners>
+		</section> -->
+	</main>
+	<app-footer></app-footer>
+</md-sidenav-container>
+<div [ngClass]="{'md-fab-bottom-right': true, 'hide': hideBackToTop}">
+	<button md-fab color="primary" appSmoothScroll navigateToElement="banner" href="./#banner">
+	<md-icon class="md-24" aria-label="Back to top">keyboard_arrow_up</md-icon>
+</button>
+</div> 
+
+
+
