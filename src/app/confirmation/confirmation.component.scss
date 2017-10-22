@@ -1,0 +1,105 @@
+@import '../../style/palette';
+
+/* Purchase form color variables */
+
+$pf-leftpane-bg: #5e91a9;
+$pf-rightpane-bg: #1d2e3e;
+$pf-rightpane-bg-start: #1d2e3e;
+$pf-rightpane-bg-end: #30465c;
+$pf-text-color: #ffffff;
+$pf-input-color: #7d8994;
+$pf-focused-input-color: #ffffff;
+$pf-selected-items-outline-color: #5e91a9;
+$pf-selected-items-text-color: #ffffff;
+$pf-selected-items-value-color: #5e91a9;
+$pf-submit-button-bg: #5e91a9;
+$pf-error-text-color: #a9389d;
+
+p {
+  margin-bottom: 0;
+  &.label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+  &.purchase-info {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+  }
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.purchaseform-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline-flex;
+
+  .pane{
+    display: flex;
+    flex: 50%;
+    vertical-align: top;
+    height: 100%;
+  }
+  .left-pane{
+    align-items: center;
+    justify-content: center;
+    background-color: $pf-leftpane-bg;
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    img {
+      width: 32%;
+
+    }
+
+  }
+
+  .pane-container {
+    display: block;
+  }
+  .right-pane {
+    background-color: $pf-rightpane-bg;
+    background: $pf-rightpane-bg-start;
+    background: -moz-radial-gradient(center, ellipse cover,  $pf-rightpane-bg-start 0%, $pf-rightpane-bg-end 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  $pf-rightpane-bg-start 0%,$pf-rightpane-bg-end 100%);
+    background: radial-gradient(ellipse at center,  $pf-rightpane-bg-start 0%,$pf-rightpane-bg-end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pf-rightpane-bg-start', endColorstr='$pf-rightpane-bg-end',GradientType=1 );
+    box-sizing: border-box;
+    padding: 6%;
+    padding-top: 3%;
+    color: $pf-text-color;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+
+    section {
+      margin-bottom: 30px;
+      padding: 0;
+      &:first-child {
+        margin-bottom: 60px;
+      }
+    }
+    .full-width {
+      width: 100%;
+      
+      input {
+        width: 100%;
+      }
+    }
+}
+
+}

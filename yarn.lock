@@ -194,6 +194,10 @@
   version "0.0.38"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.0.38.tgz#6131569a9fe21fe7bad8abf4a3174ea5a8647bbd"
 
+"@types/grecaptcha@^2.0.30":
+  version "2.0.33"
+  resolved "https://registry.yarnpkg.com/@types/grecaptcha/-/grecaptcha-2.0.33.tgz#ab5019c23c8ca9a2554d4f17c308f3d2c3477740"
+
 "@types/jasmine@*":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.6.0.tgz#997b41a27752b4850af2683bc4a8d8222c25bd02"
@@ -3433,6 +3437,12 @@ ncname@1.0.x:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ng2-recaptcha@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/ng2-recaptcha/-/ng2-recaptcha-1.7.0.tgz#3dfe14f2a2e0b5a077be4690da5873f2916a176d"
+  optionalDependencies:
+    "@types/grecaptcha" "^2.0.30"
 
 no-case@^2.2.0:
   version "2.3.2"
