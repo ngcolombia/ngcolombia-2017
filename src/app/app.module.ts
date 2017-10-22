@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 // tslint:disable-next-line:max-line-length
-import { MatSnackBarModule, MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode,MdFormFieldModule, MdInputModule } from '@angular/material';
+import { MdButtonModule, MdDialogModule, MatTabsModule, MatSidenavModule, MatCardModule, MdIconRegistry, MatIconModule, MdIconModule, NoConflictStyleCompatibilityMode, MdFormFieldModule, MdInputModule, MatSnackBarModule, MatCheckboxModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
@@ -79,6 +79,7 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		FlexLayoutModule,
 		MdFormFieldModule,
 		MdInputModule,
+		MatCheckboxModule,
 		HttpModule,
 		BrowserAnimationsModule,
 		BrowserModule,
@@ -93,10 +94,10 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		EventScheduleService,
 		MdIconRegistry,
 		TicketCheckoutService,
-	// 	{
-    //   provide: RecaptchaLoaderService,
-    //   useValue: new RecaptchaLoaderService("en"),
-    // }
+		// {
+		// 	provide: RecaptchaLoaderService,
+		// 	useValue: new RecaptchaLoaderService("en"),
+		// }
 	],
 	bootstrap: [ AppComponent ]
 })

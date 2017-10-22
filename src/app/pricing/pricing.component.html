@@ -1,6 +1,6 @@
 <div class="pricing-container">
   <div class="pricing-items" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
-    <div *ngFor="let price of prices" class="pricing-info-content" fxFlex="1 grow">
+    <div *ngFor="let price of prices, let i = index" class="pricing-info-content" fxFlex="1 grow">
       <div class="pricing-header">
         <h4 class="pricing-info-title">{{price.title}}</h4>
       </div>
@@ -8,13 +8,14 @@
         <ul>
           <li class="princing-item" *ngFor="let item of price.includes">{{item}}</li>
         </ul>
-	  </div>
-    <h2 class="pricing-price">$ {{price.value}}</h2>
-	  <div class="pricing-notes" [innerHTML]="price.notes"></div>
-      <!-- <div class="plan-action"> -->
-        <!-- <button class="mat-raised-button">Buy now</button> -->
-      <!-- </div> -->
+      </div>
+      <h2 class="pricing-price">$ {{price.value}}</h2>
+      <div class="pricing-notes" [innerHTML]="price.notes"></div>
+      <md-checkbox *ngIf="showBuyOptions" (change)="change(i)" [checked]="price.checked" >Select</md-checkbox>
     </div>
+  </div>
+  <div *ngIf="showBuyOptions" class="plan-action">
+    <button class="mat-raised-button" (click)="save()" >Buy now</button>
   </div>
   <app-photographer-credit-link authorName="Teemu Paananen" authorId="xteemu"></app-photographer-credit-link>
 </div>
