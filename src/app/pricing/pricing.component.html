@@ -1,29 +1,28 @@
 <div class="pricing-container">
   <div class="pricing-items" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
-    <div *ngFor="let price of prices, let i = index" class="pricing-info-content" fxFlex="1 grow" (click)="change(i)">
-      <div>
-        <div class="pricing-header">
-          <h4 class="pricing-info-title">{{price.title}}</h4>
-        </div>
-        <div class="pricing-features">
-          <ul>
-            <li class="princing-item" *ngFor="let item of price.includes" [innerHTML]="item"></li>
-          </ul>
-        </div>
-        <h2 class="pricing-price">$ {{price.value}}</h2>
-        <div class="pricing-notes" [innerHTML]="price.notes"></div>
-        
-        <div class="pricing-checkbox" *ngIf="showBuyOptions">
-          <label class="label">
-            <input  class="label__checkbox" type="checkbox" [checked]="price.checked" (change)="change(i)"/>
-            <span class="label__text">
-              <span class="label__check">
-                <i class="fa fa-check icon"></i>
-              </span>
-            </span>
-          </label>
-        </div>
+    <div *ngFor="let price of prices, let i = index" class="pricing-info-content" fxFlex="1 grow">
+      <div class="pricing-header">
+        <h4 class="pricing-info-title">{{price.title}}</h4>
       </div>
+      <div class="pricing-features">
+        <ul>
+          <li class="princing-item" *ngFor="let item of price.includes" [innerHTML]="item"></li>
+        </ul>
+      </div>
+      <h2 class="pricing-price">$ {{price.value}}</h2>
+      <div class="pricing-notes" [innerHTML]="price.notes"></div>
+      
+      <div class="pricing-checkbox" (change)="change(i)">
+        <label class="label">
+          <input  class="label__checkbox" type="checkbox" [checked]="price.checked" />
+          <span class="label__text">
+            <span class="label__check">
+              <i class="fa fa-check icon"></i>
+            </span>
+          </span>
+        </label>
+      </div>
+
     </div>
 
   </div>
