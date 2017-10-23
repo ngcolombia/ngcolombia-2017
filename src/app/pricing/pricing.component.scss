@@ -17,23 +17,29 @@ h2.pricing-price {
 
 .pricing-info-content {
 	position: relative;
-    padding: 24px 40px 100px;
-    margin: 20px;
-    display: inline-block;
-    background: white;
-    border-radius: 5px;
-	text-align: center;
-	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.5), 0 1px 5px 0 rgba(0,0,0,.12);
-    @media (min-width: 768px) {
-        margin: 10px;
+  padding: 24px 40px 100px;
+  margin: 20px;
+  display: inline-block;
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.5), 0 1px 5px 0 rgba(0,0,0,.12);
+  &:hover {
+    background-color: #FAFAFA;
+    .pricing-checkbox {
+      background-color: #e2e1e1;
     }
-    h4 {
+  }
+  @media (min-width: 768px) {
+    margin: 10px;
+  }
+  h4 {
 		font-size: 32px;
 		margin: 20px -40px;
 		font-weight: 800;
 	}
 	&:first-child {
-		
 		@media(min-width: 960px) {
 			margin-right: 0px;
 			border-top-right-radius: 0px;
