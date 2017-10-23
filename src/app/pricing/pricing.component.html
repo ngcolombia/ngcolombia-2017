@@ -13,7 +13,6 @@
       <div class="pricing-notes" [innerHTML]="price.notes"></div>
       <md-checkbox *ngIf="showBuyOptions" (change)="change(i)" [checked]="price.checked" >Select</md-checkbox>
     </div>
-    <app-photographer-credit-link authorName="Teemu Paananen" authorId="xteemu"></app-photographer-credit-link>
   </div>
   <div *ngIf="showBuyOptions" class="plan-action">
     <button class="mat-raised-button" (click)="save()" >Buy now</button>

@@ -12,10 +12,10 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const routes: Routes = [
 
 	{ path: '', component: MainPageComponent },
+	{ path: 'pricing',  component: PricingComponent },
 	{ path: 'purchase', component: PurchaseformComponent },
 	{ path: 'response', component: ConfirmationComponent },
 	{ path: 'purchase-error', component: PurchaseErrorComponent },
-	{ path: 'pricing/:enable',  component: PricingComponent },
 	{ path: '**', component: MainPageComponent },
 
 ];
