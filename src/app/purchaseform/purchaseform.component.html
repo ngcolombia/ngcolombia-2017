@@ -93,13 +93,13 @@
 
           </md-form-field>
         </div>
-        <button type="submit" [disabled]="!captchaIsValid || loading || checkoutInformation" class="btn">GET TICKETS</button>
+        <button type="submit" [disabled]="!captchaIsValid || loading || !!checkoutInformation" class="btn">GET TICKETS</button>
         <div class="captcha" [ngClass]="{'not-visible': captchaIsValid}">
           <recaptcha (resolved)="resolved($event)" theme="light" [siteKey]="recaptchaSiteKey" required></recaptcha>
 		</div>
 	  </form>
 	  <div *ngIf="checkoutInformation" class="redirecting">
-		Redirecting to checkout...
+		Redirecting to Checkout...
 	  </div>
 	<form *ngIf="checkoutInformation" method="post" action="{{checkoutInformation.actionUrl}}" #payUForm>
 		<input name="merchantId" type="hidden" value="{{checkoutInformation.merchantId}}">
