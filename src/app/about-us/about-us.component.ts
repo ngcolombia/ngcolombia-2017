@@ -1,4 +1,6 @@
+import { MdDialog, MdDialogRef } from '@angular/material';
 import { Component } from '@angular/core';
+import { FaqComponent } from './faq/faq.component';
 
 @Component({
 	selector: 'app-about-us',
@@ -11,6 +13,11 @@ export class AboutUsComponent {
 	readonly conferenceTabIndex = 0;
 	readonly workshopsTabIndex = 1;
 	readonly foodTabIndex = 2;
+	readonly faqTabIndex = 3;
+
+	dialogRef: MdDialogRef<FaqComponent>;
+
+	constructor( public dialog: MdDialog ) {}
 
 	showConferenceTab(): void {
 		this.selectedTab = this.conferenceTabIndex;
@@ -24,6 +31,13 @@ export class AboutUsComponent {
 		this.selectedTab = this.foodTabIndex;
 	}
 
+	showFAQ(): void {
+		this.dialogRef = this.dialog.open(FaqComponent, {
+			data: 'faq',
+			panelClass: 'faq'
+		});
+	}
+
 	get conferenceButtonColor(): string {
 		return this.getTabButtonColor(this.conferenceTabIndex);
 	}
@@ -34,6 +48,10 @@ export class AboutUsComponent {
 
 	get foodButtonColor(): string {
 		return this.getTabButtonColor(this.foodTabIndex);
+	}
+
+	get faqButtonColor(): string {
+		return this.getTabButtonColor(this.faqTabIndex);
 	}
 
 	getTabButtonColor(tabIndex: number): string {

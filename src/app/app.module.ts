@@ -41,6 +41,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { PurchaseErrorComponent } from './purchase-error/purchase-error.component';
+import { FaqComponent } from './about-us/faq/faq.component';
 
 @NgModule({
 	declarations: [
@@ -68,7 +69,8 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		PagenotfoundComponent,
 		PurchaseformComponent,
 		ConfirmationComponent,
-		PurchaseErrorComponent
+		PurchaseErrorComponent,
+		FaqComponent
 	],
 	imports: [
 		MdButtonModule,
@@ -92,7 +94,7 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		ReactiveFormsModule,
 		RecaptchaModule.forRoot()
 	],
-	entryComponents: [ SpeakerDetailComponent, EventScheduleComponent, EventScheduleDetailComponent ],
+	entryComponents: [ SpeakerDetailComponent, EventScheduleComponent, EventScheduleDetailComponent, FaqComponent ],
 	providers: [ CountdownService,
 		SpeakerService,
 		EventScheduleService,
