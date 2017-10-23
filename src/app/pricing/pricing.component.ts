@@ -58,8 +58,10 @@ export class PricingComponent implements OnInit {
 	}
 
 	change(index: number) {
-		this.prices[index].checked = !this.prices[index].checked;
-		this.validateOnlyOneWorkshop(index);
+		if(this.showBuyOptions) {
+			this.prices[index].checked = !this.prices[index].checked;
+			this.validateOnlyOneWorkshop(index);
+		}
 	}
 
 	validateOnlyOneWorkshop(index: number) {
