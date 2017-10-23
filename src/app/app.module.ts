@@ -83,6 +83,7 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		MdFormFieldModule,
 		MdInputModule,
 		FormsModule,
+		MatCheckboxModule,
 		HttpModule,
 		BrowserAnimationsModule,
 		BrowserModule,

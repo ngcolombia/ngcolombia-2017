@@ -54,8 +54,7 @@ export class PurchaseformComponent implements OnInit {
 		}
 	}
 
-	constructor(private ticketCheckoutService: TicketCheckoutService, private snackbar: MatSnackBar) { 
-		localStorage.purchaseItems = 'mcw1';
+	constructor(private ticketCheckoutService: TicketCheckoutService, private snackbar: MatSnackBar) {
 	}
 
 	ngOnInit(): void {
