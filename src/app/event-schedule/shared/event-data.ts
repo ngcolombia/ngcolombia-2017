@@ -35,9 +35,9 @@ export const mainConferenceData: EventSchedule[] = [
 	new EventSchedule(
 		'3:40 PM',
 		'4:00 PM',
-		'TBD',
+		'ANGULAR ANIMATIONS: BECAUSE AN ANIMATION IS WORTH A THOUSAND IMAGES',
 		// tslint:disable-next-line:max-line-length
-		null,
+		'Let\'s learn how to turn your solutions into handsome dynamic Angular Applications by using the optimized Animations Module based on the Web Animations API. <br> Starting from scratch through the understanding of the animations principles applied to the web, this talk will drive you safely from simple CSS transitions examples to the land of advanced levels where you can freely move as a rockstar.',
 		'Carlos Angulo',
 		'./assets/img/profiles/carlos_angulo.jpg'),
 	new EventSchedule(

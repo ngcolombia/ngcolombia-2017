@@ -6,10 +6,15 @@
     "ng": "ng",
     "start": "ng serve",
     "ng-build": "ng build --aot --prod --output-path docs --base-href ./",
-    "build": "npm run ng-build & copyfiles CNAME docs/",
+    "build": "npm run ng-build & copyfiles CNAME docs/ & npm run routing",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "copy": "cd docs/ & copyfiles index.html temp/",
+    "rename": "cd docs/temp & rename index.html 404.html",
+    "copyback": "cd docs/temp & copyfiles 404.html ../",
+    "removefolder": "cd docs & rmdir /s /q temp",
+    "routing": "npm run copy & npm run rename & npm run copyback & npm run removefolder"
   },
   "private": true,
   "dependencies": {
