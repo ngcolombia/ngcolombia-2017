@@ -91,7 +91,7 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 		ReactiveFormsModule,
 		RecaptchaModule.forRoot()
 	],
-	entryComponents: [ SpeakerDetailComponent, EventScheduleComponent ],
+	entryComponents: [ SpeakerDetailComponent, EventScheduleComponent, EventScheduleDetailComponent ],
 	providers: [ CountdownService,
 		SpeakerService,
 		EventScheduleService,
