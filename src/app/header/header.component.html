@@ -1,7 +1,7 @@
 <div class="container">
 	<div fxLayout="row" fxLayoutAlign="space-between center">
 		<app-logo></app-logo>
-		<app-nav-menu fxShow fxHide.xs fxHide.sm></app-nav-menu>
+		<app-nav-menu *ngIf="showNavbar"  fxShow fxHide.xs fxHide.sm></app-nav-menu>
 		<button fxHide fxShow.xs fxShow.sm md-raised-button color="primary" type="button" (click)="toggleNav()" md-button class="toogle-side-bar">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
