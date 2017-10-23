@@ -6,6 +6,7 @@ $pf-leftpane-bg: #5e91a9;
 $pf-rightpane-bg: #1d2e3e;
 $pf-rightpane-bg-start: #1d2e3e;
 $pf-rightpane-bg-end: #30465c;
+$pf-mobile-logo-underline-color: #5e91a9;
 $pf-text-color: #ffffff;
 $pf-input-color: #7d8994;
 $pf-focused-input-color: #ffffff;
@@ -232,6 +233,21 @@ $pf-error-text-color: #a9389d;
       
       input {
         width: 100%;
+      }
+    }
+    .mobile-logo {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 20px;
+        border-bottom: 1px solid $pf-mobile-logo-underline-color;
+      }
+
+      img {
+        height: 65px;
       }
     }
 }
