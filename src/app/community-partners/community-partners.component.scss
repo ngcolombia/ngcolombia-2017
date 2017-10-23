@@ -37,3 +37,12 @@
 .section-title {
     color: #7d1a65;
 }
+
+a {
+    p {
+        color: #888;
+    }
+    &:hover p {
+        color: #333;
+    }
+}
