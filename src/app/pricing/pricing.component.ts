@@ -65,12 +65,13 @@ export class PricingComponent implements OnInit {
 	}
 
 	validateOnlyOneWorkshop(index: number) {
-		// TODO: Still not working
 		if ((this.prices[0].checked === this.prices[2].checked) && (this.prices[0].checked || this.prices[2].checked)) {
-			this.prices[index].checked = false;
-			this.snackbar.open('Please select only one workshop', 'Close', {
-				duration: 5000
-			});
+			setTimeout(() => {
+				this.prices[index].checked = false;
+				this.snackbar.open('Please select only one workshop', 'Close', {
+					duration: 5000
+				});
+			}, 0)
 		}
 	}
 
