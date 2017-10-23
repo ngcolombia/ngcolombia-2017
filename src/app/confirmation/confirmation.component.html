@@ -3,6 +3,9 @@
     <img src="assets/img/logo-white.svg" alt="ng-colombia logo">
   </div>
   <div class="right-pane pane">
+    <div class="mobile-logo">
+        <img src="assets/img/logo-white.svg" alt="ng-colombia logo">
+    </div>
     <div class="pane-container" *ngIf="checkoutResponse">
       <section *ngIf="!this.isPending">
           <h1>CONGRATULATIONS!</h1>
@@ -15,7 +18,12 @@
 			<h2>NG-COLOMBIA</h2>
 			<p>You are going to receive an email when you transaction is confirmed for the Provider</p>
 
-		</section>
+    </section>
+    <section *ngIf="!this.isPending">
+      <div class="remember">
+        <p>Keep in mind that you don't need to print anything to validate your entry at the event registration, but <strong>you MUST bring your ID document (cédula) with you</strong>.</p>
+      </div>
+    </section>
 	  <section>
         <p class="label">Description:</p>
         <p class="purchase-info">{{checkoutResponse.description}}</p>

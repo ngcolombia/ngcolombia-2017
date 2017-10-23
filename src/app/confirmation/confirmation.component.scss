@@ -14,6 +14,10 @@ $pf-selected-items-text-color: #ffffff;
 $pf-selected-items-value-color: #5e91a9;
 $pf-submit-button-bg: #5e91a9;
 $pf-error-text-color: #a9389d;
+$pf-remember-bg: #ffffff;
+$pf-remember-color: #1d2e3e;
+$pf-mobile-logo-underline-color: #5e91a9;
+
 
 p {
   margin-bottom: 0;
@@ -83,7 +87,7 @@ h2 {
     color: $pf-text-color;
     width: 100%;
     overflow-y: auto;
-    display: flex;
+    display: block;
     align-items: center;
 
     section {
@@ -98,6 +102,29 @@ h2 {
       
       input {
         width: 100%;
+      }
+    }
+
+    .remember {
+      background: $pf-remember-bg;
+      color: $pf-remember-color;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+    .mobile-logo {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 20px;
+        border-bottom: 1px solid $pf-mobile-logo-underline-color;
+      }
+
+      img {
+        height: 65px;
       }
     }
 }
