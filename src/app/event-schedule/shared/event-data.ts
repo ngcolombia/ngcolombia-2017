@@ -69,7 +69,7 @@ export const mainConferenceData: EventSchedule[] = [
 		'5:30 PM',
 		'Advanced Components and Directives',
 		// tslint:disable-next-line:max-line-length
-		null,
+		'Angular components and directives allow developers to build complex and reusable functionality and UI Components. However, some features and concepts are still unknown by many. Israel will showcase some of Angular\'s more advanced features, and patterns. Experts and  beginners alike can benefit from these deeper Angular\'s advanced concepts.',
 		'Israel Guzman',
 		'./assets/img/profiles/israel_guzman.png'),
 	new EventSchedule(
