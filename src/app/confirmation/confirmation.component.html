@@ -4,11 +4,18 @@
   </div>
   <div class="right-pane pane">
     <div class="pane-container" *ngIf="checkoutResponse">
-      <section>
+      <section *ngIf="!this.isPending">
           <h1>CONGRATULATIONS!</h1>
           <p>Now you are part of the first conference of Angular in Latin America</p>
           <h2>NG-COLOMBIA</h2>
 	  </section>
+	  <section *ngIf="this.isPending">
+			<h1>CONFIRMATION PENDING</h1>
+			<p>You are close to be part of the first conference of Angular in Latin America</p>
+			<h2>NG-COLOMBIA</h2>
+			<p>You are going to receive an email when you transaction is confirmed for the Provider</p>
+
+		</section>
 	  <section>
         <p class="label">Description:</p>
         <p class="purchase-info">{{checkoutResponse.description}}</p>

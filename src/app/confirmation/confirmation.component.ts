@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ConfirmationComponent implements OnInit {
 
 	payUParams: any;
+	isPending: boolean;
 	checkoutResponse: CheckoutResponse;
 
 	constructor(
@@ -30,6 +31,9 @@ export class ConfirmationComponent implements OnInit {
 					(response: TransactionResult) => {
 						if (response.success) {
 							this.checkoutResponse =	this.mapCheckoutResponse(this.payUParams);
+						} else if (response.pending) {
+							this.checkoutResponse =	this.mapCheckoutResponse(this.payUParams);
+							this.isPending = true;
 						} else {
 							this.handleError();
 						}

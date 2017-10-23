@@ -1,3 +1,3 @@
 export class TransactionResult {
-	constructor(public success: boolean, public message: string) { }
+	constructor(public success: boolean, public pending: boolean, public message: string) { }
 }
