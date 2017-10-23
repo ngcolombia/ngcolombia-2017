@@ -102,13 +102,6 @@ export class PurchaseformComponent implements OnInit {
 		this.purchaseTotal = total;
 	}
 
-
-	removeItem(index) {
-		this.attendantInformation.tickets.splice(index, 1);
-		this.calculatePurchaseTotal();
-	}
-
-
 	resolved(captchaResponse: string) {
 		this.captchaIsValid = captchaResponse !== null ? true : false;
 		this.attendantInformation.tokenCaptcha = captchaResponse;

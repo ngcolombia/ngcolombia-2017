@@ -12,7 +12,6 @@
           <div class="item-name">{{purchaseItemsLabels[item.ticketCode].name | uppercase}}</div>
           <div class="item-value">{{purchaseItemsLabels[item.ticketCode].cost | currency:'USD':true:'2.0-0'}}</div>
         </div>
-        <span class="remove-item" (click)="removeItem(i)"><i class="fa fa-times-circle"></i></span> 
       </div>
       <div class="purchase-total">
         <div class="item-name">{{'Total' | uppercase}}</div>
@@ -23,7 +22,7 @@
       <p>Welcome!
         <br>Thanks for choosing to attend
         <strong>NG-COLOMBIA</strong>.
-        <br>Please fill your information in the requiered fields.
+        <br>Please fill your information in the required fields.
       </p>
     </div>
     <div class="form-container">
@@ -70,9 +69,9 @@
         </div>
         <div>
           <md-form-field class="full-width">
-            <input [(ngModel)]="attendantInformation.customerId" name="idNumber" mdInput placeholder="I.D. NUMBER" formControlName="idNumber">
+            <input [(ngModel)]="attendantInformation.customerId" name="idNumber" mdInput placeholder="IDENTIFICATION (cédula)" formControlName="idNumber">
             <md-error *ngIf="attendantInformationForm.get('idNumber').hasError('required')">
-              ID number is
+              Identification is
               <strong>required</strong>
             </md-error>
             <md-error *ngIf="attendantInformationForm.get('idNumber').hasError('pattern')">
