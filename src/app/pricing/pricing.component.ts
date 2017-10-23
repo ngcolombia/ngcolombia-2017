@@ -17,7 +17,7 @@ export class PricingComponent implements OnInit {
 			title: 'Workshop #1 ',
 			value: 20,
 			includes: [
-				'Access to Workshop #1',
+				'<strong>Angular: From zero to Hero</strong>',
 				'Morning snacks',
 				'Free Coffee',
 				'Swag'
@@ -40,7 +40,7 @@ export class PricingComponent implements OnInit {
 			title: 'Workshop #2',
 			value: 20,
 			includes: [
-				'Access to Workshop #2',
+				'<strong>RxJS Like a Boss</strong>',
 				'Morning snacks',
 				'Free Coffee',
 				'Swag'
@@ -66,7 +66,7 @@ export class PricingComponent implements OnInit {
 		if ((this.prices[0].checked === this.prices[2].checked) && (this.prices[0].checked || this.prices[2].checked)) {
 			setTimeout(() => {
 				this.prices[index].checked = false;
-				this.snackbar.open('🖐 Please select only one workshop 🖐', 'Close', {
+				this.snackbar.open('😉 Please select only one workshop 😉', null, {
 					duration: 5000
 				});
 			}, 0);
@@ -89,7 +89,7 @@ export class PricingComponent implements OnInit {
 			localStorage.setItem('purchaseItems', data);
 			this.router.navigate(['/purchase']);
 		} else {
-			this.snackbar.open('😉 Make a selection first, please 😉', 'Close', {
+			this.snackbar.open('😉 Make a selection first, please 😉', null, {
 				duration: 5000
 			});
 		}

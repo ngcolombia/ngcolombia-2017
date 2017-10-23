@@ -6,13 +6,25 @@
       </div>
       <div class="pricing-features">
         <ul>
-          <li class="princing-item" *ngFor="let item of price.includes">{{item}}</li>
+          <li class="princing-item" *ngFor="let item of price.includes" [innerHTML]="item"></li>
         </ul>
       </div>
       <h2 class="pricing-price">$ {{price.value}}</h2>
       <div class="pricing-notes" [innerHTML]="price.notes"></div>
-      <md-checkbox *ngIf="showBuyOptions" (change)="change(i)" [checked]="price.checked" >Select</md-checkbox>
+      
+      <div class="pricing-checkbox" (change)="change(i)">
+        <label class="label">
+          <input  class="label__checkbox" type="checkbox" [checked]="price.checked" />
+          <span class="label__text">
+            <span class="label__check">
+              <i class="fa fa-check icon"></i>
+            </span>
+          </span>
+        </label>
+      </div>
+
     </div>
+
   </div>
   <div *ngIf="showBuyOptions" class="plan-action">
     <button class="mat-raised-button" (click)="save()" >Buy now</button>
