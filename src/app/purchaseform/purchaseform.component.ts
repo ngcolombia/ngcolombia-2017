@@ -117,12 +117,13 @@ export class PurchaseformComponent implements OnInit {
 						this.checkoutInformation = response;
 						this.loading = false;
 					},
-					(error: any) => {
+					(error) => {
 						this.loading = false;
 						let message = 'Technical Error, please try again';
-
-						if (error.message) {
-							message = error.message;
+						let body;
+						try { body = JSON.parse(error._body); } catch (something) {  }
+						if (body && body.message) {
+							message = body.message;
 						}
 
 						this.snackbar.open(message, 'Close', {

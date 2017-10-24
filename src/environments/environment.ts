@@ -6,6 +6,6 @@
 export const environment = {
 	production: false,
 	recaptchaSiteToken: '6LefLTUUAAAAAMLeOt5SyjhMNrX50P79CqHzmZju',
-	apiBaseUrl: 'http://ngcolombia-tickets.azurewebsites.net/api'
+	apiBaseUrl: 'http://localhost:59576/api'
 
 };
