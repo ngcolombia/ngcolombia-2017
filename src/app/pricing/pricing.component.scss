@@ -97,10 +97,9 @@ li.princing-item {
 }
 
 .pricing-items {
-    margin: 20px;
+    margin: auto;
     @media (min-width: 768px) {
-        max-width: 85%;
-        margin: 0 120px;
+        width: 85%;
     }
 }
 
