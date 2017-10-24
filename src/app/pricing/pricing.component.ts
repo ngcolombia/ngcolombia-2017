@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material';
 	styleUrls: ['./pricing.component.scss']
 })
 export class PricingComponent implements OnInit {
-	showBuyOptions: boolean;
+
 	prices = [
 		{
 			title: 'Workshop #1 ',
@@ -52,16 +52,11 @@ export class PricingComponent implements OnInit {
 	constructor(private route: ActivatedRoute, private snackbar: MatSnackBar, private router: Router) { }
 
 	ngOnInit() {
-		this.route.queryParams.subscribe((params: Params) => {
-			this.showBuyOptions = params['key'] === 'i_will_attend_ng-colombia_fuck_yeah';
-		});
 	}
 
 	change(index: number) {
-		if(this.showBuyOptions) {
 			this.prices[index].checked = !this.prices[index].checked;
 			this.validateOnlyOneWorkshop(index);
-		}
 	}
 
 	validateOnlyOneWorkshop(index: number) {

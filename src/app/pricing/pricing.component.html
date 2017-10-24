@@ -13,7 +13,7 @@
         <h2 class="pricing-price">$ {{price.value}}</h2>
         <div class="pricing-notes" [innerHTML]="price.notes"></div>
         
-        <div class="pricing-checkbox" *ngIf="showBuyOptions">
+        <div class="pricing-checkbox">
           <label class="label">
             <input  class="label__checkbox" type="checkbox" [checked]="price.checked" (change)="change(i)"/>
             <span class="label__text">
@@ -27,7 +27,7 @@
     </div>
 
   </div>
-  <div *ngIf="showBuyOptions" class="plan-action">
+  <div class="plan-action">
     <button class="mat-raised-button" (click)="save()" >Buy now</button>
   </div>
   <app-photographer-credit-link authorName="Teemu Paananen" authorId="xteemu"></app-photographer-credit-link>

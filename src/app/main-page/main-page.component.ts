@@ -10,7 +10,6 @@ import { Component, ViewChild, HostListener, OnInit } from '@angular/core';
 export class MainPageComponent implements OnInit {
 
 	hideBackToTop = true;
-	showNavbar = true;
 
 	@ViewChild(MdSidenav) sidenav: MdSidenav;
 
@@ -19,9 +18,6 @@ export class MainPageComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.route.queryParams.subscribe((params: Params) => {
-			this.showNavbar = params['key'] !== 'i_will_attend_ng-colombia_fuck_yeah';
-		});
 	}
 
 	closeNav(selected: boolean): void {
