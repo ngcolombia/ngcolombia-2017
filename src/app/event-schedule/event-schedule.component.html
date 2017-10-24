@@ -18,7 +18,7 @@
 		<div class="time-range" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
 			<span>{{event.startingTime}}</span>	 <span *ngIf=event.endingTime >- {{event.endingTime}}</span>
 		</div>
-		<md-card *ngIf="event.workshop_1" class="event-spot" fxFlex="45" fxFlex.xs="50" fxFlex.sm="50">
+		<md-card *ngIf="event.workshop_1" class="event-spot" fxFlex="45" fxFlex.xs="100" fxFlex.sm="50">
 			<md-card-content>
 					<img *ngIf="event.imgUrl" src="{{event.workshop_1.imgUrl}}" alt="" width="58">
 					<div class="event-facilitator">{{event.workshop_1.facilitator}}</div>
@@ -29,7 +29,10 @@
 				
 			</md-card-content>
 		</md-card>
-		<md-card *ngIf="event.workshop_2" class="event-spot" fxFlex="45" fxFlex.xs="50" fxFlex.sm="50">
+		<div class="time-range repeat-time-for-mobile" fxFlex="10" fxFlex.xs="100" fxFlex.sm="100">
+				<span>{{event.startingTime}}</span>	 <span *ngIf=event.endingTime >- {{event.endingTime}}</span>
+			</div>
+		<md-card *ngIf="event.workshop_2" class="event-spot" fxFlex="45" fxFlex.xs="100" fxFlex.sm="50">
 			<md-card-content>
 					<img *ngIf="event.imgUrl" src="{{event.workshop_2.imgUrl}}" alt="" width="58">
 					<div class="event-facilitator">{{event.workshop_2.facilitator}}</div>
