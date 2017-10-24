@@ -11,7 +11,7 @@ export const mainConferenceData: EventSchedule[] = [
 	new EventSchedule(
 		'2:30 PM',
 		'3:00 PM',
-		'TBD',
+		'NG-CURIOUS',
 		// tslint:disable-next-line:max-line-length
 		null,
 		'Josue Gutierrez',
