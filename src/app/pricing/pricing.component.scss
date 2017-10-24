@@ -54,12 +54,12 @@ h2.pricing-price {
 		}
 	}
 	&:nth-child(2) {
-		z-index: 4;
-		.pricing-info-title, h2.pricing-price {
-			color: map-get($md-ngcolombiablue, 600);
+    .pricing-info-title, h2.pricing-price {
+      color: map-get($md-ngcolombiablue, 600);
 		}
-
+    
 		@media(min-width: 960px) {
+      z-index: 4;
 			margin-left: 0px;
 			margin-right: 0px;
 			margin-top: -40px;
