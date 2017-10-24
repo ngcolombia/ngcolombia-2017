@@ -1,8 +1,7 @@
 .mat-dialog-title{
     color: #7d1a65;
-    @media screen and (min-width: 768px) {
-        font-weight: 800;
-    }
+    font-size: 27px;
+    font-weight: 800;
 }
 
 md-dialog-content{
@@ -16,16 +15,14 @@ md-dialog-content{
 }
 
 .mat-dialog-content{    
-    padding: 50px;
-    padding-bottom: 2rem;
-}
-
-@media screen and (min-width: 1000px) {
-    .mat-dialog-content{    
-        overflow: hidden;
+    @media (min-width: 768px) {
+        padding: 40px;
+        padding-bottom: 2rem;
     }
 }
 
 .faq-content{
-    font-size: 18px;
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
 }
