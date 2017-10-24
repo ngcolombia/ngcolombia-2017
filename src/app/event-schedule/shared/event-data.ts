@@ -85,7 +85,7 @@ export const mainConferenceData: EventSchedule[] = [
 		'6:00 PM',
 		'AMA: Ask me anything',
 		// tslint:disable-next-line:max-line-length
-		'Literally anything! 👌 All of the speakers will sit in the front just to answer your questions, whatever they are. You can ask open questions or target a particular speaker, it\'s up to you! 😉',
+		'Literally anything! 👌🏼 All of the speakers will sit in the front just to answer your questions, whatever they are. You can ask open questions or target a particular speaker, it\'s up to you! 😉',
 		'All speakers',
 		'./assets/img/mic.svg'),
 		new EventSchedule(
@@ -93,7 +93,7 @@ export const mainConferenceData: EventSchedule[] = [
 		null,
 		'Closure',
 		// tslint:disable-next-line:max-line-length
-		'It\'s time to say goodbye 😢, but not for too long 🖐, we will meet you again in 2018 for sure! 💪',
+		'It\'s time to say goodbye 😢, but not for too long 🖐🏼, we will meet you again in 2018 for sure! 💪🏼',
 		null,
 		null)
 ];
