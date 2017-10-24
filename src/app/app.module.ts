@@ -1,3 +1,4 @@
+import { NewsletterFormModule } from './newsletter-form/newsletter-form.module';
 import { TicketCheckoutService } from './shared/services/ticket-checkout.service';
 import { EventScheduleService } from './event-schedule/shared/event-schedule.service';
 import { EventSchedule } from './event-schedule/shared/event-schedule.model';
@@ -20,7 +21,6 @@ import { AppComponent } from './app.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SpeakersComponent } from './speakers/speakers.component';
-import { NewsletterFormComponent } from './newsletter-form/newsletter-form.component';
 import { MainBannerComponent } from './main-banner/main-banner.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { TimeBoxComponent } from './countdown/time-box/time-box.component';
@@ -49,7 +49,6 @@ import { FaqComponent } from './about-us/faq/faq.component';
 		CountdownComponent,
 		AboutUsComponent,
 		SpeakersComponent,
-		NewsletterFormComponent,
 		MainBannerComponent,
 		MainPageComponent,
 		TimeBoxComponent,
@@ -92,7 +91,8 @@ import { FaqComponent } from './about-us/faq/faq.component';
 		FeatureRoutingModule,
 		FormsModule,
 		ReactiveFormsModule,
-		RecaptchaModule.forRoot()
+		RecaptchaModule.forRoot(),
+		NewsletterFormModule
 	],
 	entryComponents: [ SpeakerDetailComponent, EventScheduleComponent, EventScheduleDetailComponent, FaqComponent ],
 	providers: [ CountdownService,
