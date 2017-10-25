@@ -14,6 +14,11 @@ export class CommunityPartnersComponent implements OnInit {
 			url: 'https://www.meetup.com/GDG-Medellin'
 		},
 		{
+			name: 'Angular Medellin',
+			imgUrl: '/assets/img/ANGULAR_MEDELLIN.png',
+			url: 'http://angularmedellin.com/'
+		},
+		{
 			name: 'Pioneras Developers',
 			imgUrl: '/assets/img/pioneras.png',
 			url: 'https://www.meetup.com/PionerasDevelopers/'
