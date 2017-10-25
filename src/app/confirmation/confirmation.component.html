@@ -1,54 +1,53 @@
 <div class="purchaseform-container">
-  <div class="left-pane pane">
-    <img src="assets/img/logo-white.svg" alt="ng-colombia logo">
-  </div>
-  <div class="right-pane pane">
-    <div class="mobile-logo">
-        <img src="assets/img/logo-white.svg" alt="ng-colombia logo">
-    </div>
-    <div class="pane-container" *ngIf="checkoutResponse">
-      <section *ngIf="!this.isPending">
-          <h1>CONGRATULATIONS!</h1>
-          <p>Now you are part of the first conference of Angular in Latin America</p>
-          <h2>NG-COLOMBIA</h2>
-	  </section>
-	  <section *ngIf="this.isPending">
-			<h1>CONFIRMATION PENDING</h1>
-			<p>You are close to be part of the first conference of Angular in Latin America</p>
-			<h2>NG-COLOMBIA</h2>
-			<p>You are going to receive an email when you transaction is confirmed for the Provider</p>
+	<div class="left-pane pane">
+		<img src="assets/img/logo-white.svg" alt="ng-colombia logo">
+	</div>
+	<div class="right-pane pane">
+		<div class="mobile-logo">
+			<img src="assets/img/logo-white.svg" alt="ng-colombia logo">
+		</div>
+		<div class="pane-container" *ngIf="checkoutConfirmation">
+			<section>
+				<h1>CONGRATULATIONS!</h1>
+				<p>Now you are part of the first conference of Angular in Latin America</p>
+				<h2>NG-COLOMBIA</h2>
+			</section>
 
-    </section>
-    <section *ngIf="!this.isPending">
-      <div class="remember">
-        <p>Keep in mind that you don't need to print anything to validate your entry at the event registration, but <strong>you MUST bring your ID document (cédula) with you</strong>.</p>
-      </div>
-    </section>
-	  <section>
-        <p class="label">Description:</p>
-        <p class="purchase-info">{{checkoutResponse.description}}</p>
-      </section>
-	  <section>
-        <p class="label">Transaction Date:</p>
-        <p class="purchase-info">{{checkoutResponse.processDate}}</p>
-      </section>
-      <section>
-        <p class="label">Reference Code:</p>
-        <p class="purchase-info">{{checkoutResponse.referenceId}}</p>
-      </section>
-      <section>
-        <p class="label">YOUR PURCHASE:</p>
-        <p class="purchase-info">$ {{checkoutResponse.value}} {{checkoutResponse.currency}}</p>
-      </section>
-      <section>
-        <br>
-        <p><span class="label">Share the good news: &nbsp;&nbsp;</span><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="¡Nos vemos el 18 de Noviembre en #NgColombia @YuxiGlobal" data-url="http://ng-colombia.org/" data-show-count="false">Tweet</a></p>
-        <p class="purchase-info"></p>
-      </section>
+			<section>
+				<div class="remember">
+					<p>Keep in mind that you don't need to print anything to validate your entry at the event registration, but
+						<strong>you MUST bring your ID document (cédula) with you</strong>.</p>
+				</div>
+			</section>
+			<section>
+				<p class="label">Description:</p>
+				<p class="purchase-info">{{checkoutConfirmation.description}}</p>
+			</section>
+			<section>
+				<p class="label">Transaction Date:</p>
+				<p class="purchase-info">{{checkoutConfirmation.processDate}}</p>
+			</section>
+			<section>
+				<p class="label">Reference Code:</p>
+				<p class="purchase-info">{{checkoutConfirmation.referenceId}}</p>
+			</section>
+			<section>
+				<p class="label">YOUR PURCHASE:</p>
+				<p class="purchase-info">$ {{checkoutConfirmation.value}} {{checkoutConfirmation.currency}}</p>
+			</section>
+			<section>
+				<br>
+				<p>
+					<span class="label">Share the good news: &nbsp;&nbsp;</span>
+					<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+					 data-size="large" data-text="¡Nos vemos el 18 de Noviembre en #NgColombia @YuxiGlobal" data-url="http://ng-colombia.org/"
+					 data-show-count="false">Tweet</a>
+				</p>
+				<p class="purchase-info"></p>
+			</section>
 
-      <a [routerLink]="['/']" class="mat-raised-button button mat-primary">BACK TO WEBSITE</a>
+			<a [routerLink]="['/']" class="mat-raised-button button mat-primary">BACK TO WEBSITE</a>
 
-      
-    </div>
-  </div>
+		</div>
+	</div>
 </div>

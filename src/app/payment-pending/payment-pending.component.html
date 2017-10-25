@@ -1,0 +1,21 @@
+<div class="purchaseform-container">
+	<div class="left-pane pane">
+		<img src="assets/img/logo-white.svg" alt="ng-colombia logo">
+	</div>
+	<div class="right-pane pane">
+		<div class="mobile-logo">
+			<img src="assets/img/logo-white.svg" alt="ng-colombia logo">
+		</div>
+		<div class="pane-container" *ngIf="checkoutConfirmation">
+			<section>
+				<h1>CONFIRMATION PENDING</h1>
+				<p>You are close to be part of the first conference of Angular in Latin America</p>
+				<h2>NG-COLOMBIA</h2>
+				<p>You are going to receive an email when you transaction is confirmed for the Provider</p>
+			</section>
+
+			<a [routerLink]="['/']" class="mat-raised-button button mat-primary">BACK TO WEBSITE</a>
+
+		</div>
+	</div>
+</div>

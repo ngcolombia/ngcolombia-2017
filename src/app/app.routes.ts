@@ -1,3 +1,5 @@
+import { PaymentPendingComponent } from './payment-pending/payment-pending.component';
+import { PaymentResponseComponent } from './payment-response/payment-response.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { AppComponent } from './app.component';
@@ -12,10 +14,11 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const routes: Routes = [
 
 	{ path: '', component: MainPageComponent },
-	{ path: 'pricing',  component: PricingComponent },
 	{ path: 'purchase', component: PurchaseformComponent },
-	{ path: 'response', component: ConfirmationComponent },
+	{ path: 'response', component: PaymentResponseComponent },
+	{ path: 'pending', component: PaymentPendingComponent },
 	{ path: 'purchase-error', component: PurchaseErrorComponent },
+	{ path: 'confirmation', component: ConfirmationComponent },
 	{ path: '**', component: MainPageComponent },
 
 ];

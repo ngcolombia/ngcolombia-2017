@@ -42,6 +42,8 @@ import { PurchaseformComponent } from './purchaseform/purchaseform.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { PurchaseErrorComponent } from './purchase-error/purchase-error.component';
 import { FaqComponent } from './about-us/faq/faq.component';
+import { PaymentResponseComponent } from './payment-response/payment-response.component';
+import { PaymentPendingComponent } from './payment-pending/payment-pending.component';
 
 @NgModule({
 	declarations: [
@@ -69,7 +71,9 @@ import { FaqComponent } from './about-us/faq/faq.component';
 		PurchaseformComponent,
 		ConfirmationComponent,
 		PurchaseErrorComponent,
-		FaqComponent
+		FaqComponent,
+		PaymentResponseComponent,
+		PaymentPendingComponent
 	],
 	imports: [
 		MdButtonModule,

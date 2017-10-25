@@ -1,16 +1,14 @@
 import { CheckoutConfirmation } from './../shared/models/checkout-confirmation.model';
-
-import { TransactionResult } from './../shared/models/transaction-result.model';
 import { TicketCheckoutService } from './../shared/services/ticket-checkout.service';
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-confirmation',
-	templateUrl: './confirmation.component.html',
-	styleUrls: ['./confirmation.component.scss']
+	selector: 'app-payment-pending',
+	templateUrl: './payment-pending.component.html',
+	styleUrls: ['./payment-pending.component.scss']
 })
-export class ConfirmationComponent implements OnInit {
+export class PaymentPendingComponent implements OnInit {
 
 	payUParams: any;
 	checkoutConfirmation: CheckoutConfirmation;
