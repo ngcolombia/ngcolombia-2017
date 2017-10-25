@@ -5,7 +5,7 @@ export const mainConferenceData: EventSchedule[] = [
 		'2:30 PM',
 		'🌟 Welcome 🌟',
 		// tslint:disable-next-line:max-line-length		
-		'The first Angular International Conference in Colombia has arrived and we must kick it off with as it deserves. In this quick introduction we will officially start the conference and get everyone ready for all the great speakers, contents, gifts, surprises and more! 😎',
+		'The first Angular International Conference in Colombia has arrived and we must kick it off as it deserves. In this quick introduction we will officially start the conference and get everyone ready for all the great speakers, contents, gifts, surprises and more! 😎',
 		'Juan Herrera',
 		'./assets/img/profiles/juan_herrera.jpg'),
 	new EventSchedule(
