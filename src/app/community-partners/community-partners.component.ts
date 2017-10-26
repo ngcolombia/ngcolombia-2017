@@ -22,6 +22,11 @@ export class CommunityPartnersComponent implements OnInit {
 			name: 'Pioneras Developers',
 			imgUrl: '/assets/img/pioneras.png',
 			url: 'https://www.meetup.com/PionerasDevelopers/'
+		},
+		{
+			name: 'MedellínJS',
+			imgUrl: '/assets/img/medellinjs.jpg',
+			url: 'https://www.meetup.com/medellinjs'
 		}
 	];
 

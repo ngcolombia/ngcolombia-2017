@@ -21,9 +21,9 @@
 
 .partner-image img {
     position: relative;
-    width: 335px;
+    max-width: 335px;
     @media (min-width: 768px){
-        width: 365px;
+        max-width: 365px;
     }
 }
 
