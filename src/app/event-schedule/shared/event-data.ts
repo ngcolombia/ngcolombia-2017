@@ -19,9 +19,9 @@ export const mainConferenceData: EventSchedule[] = [
 	new EventSchedule(
 		'3:00 PM',
 		'3:20 PM',
-		'TBD',
+		'CODE AND DEPLOY ANGULAR TO THE CLOUD',
 		// tslint:disable-next-line:max-line-length
-		null,
+		'Getting started with Angular is now easier than ever ... said no one ever. Yet with the right tool-set we too can create magic. When I code with Angular I can deploy to Azure within minutes. We\'ll go through a simple development to production workflow. First we code with a little help from the Angular CLI. Then we build for production - Webpack to the rescue. We then push our code to Github and deploy it to Node on Azure. Mission accomplished, application is now up in the cloud.',
 		'Simona Cotin',
 		'./assets/img/profiles/simona_cottin.jpg'),
 	new EventSchedule(
