@@ -188,6 +188,10 @@ li.princing-item {
   }
 }
 
+.sold-out {
+  color: map-get($md-ngcolombia, 500);
+}
+
 .center {
   position: absolute;
   top: 50%; left: 50%;

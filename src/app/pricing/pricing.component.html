@@ -14,7 +14,7 @@
         <div class="pricing-notes" [innerHTML]="price.notes"></div>
         
         <div class="pricing-checkbox">
-          <label class="label">
+          <label *ngIf="price.title !== 'Workshop #2'" class="label">
             <input  class="label__checkbox" type="checkbox" [checked]="price.checked" (change)="change(i)"/>
             <span class="label__text">
               <span class="label__check">
@@ -22,6 +22,7 @@
               </span>
             </span>
           </label>
+          <label *ngIf="price.title == 'Workshop #2'" class="label"><h4 class="sold-out">SOLD OUT</h4></label>
         </div>
       </div>
     </div>
