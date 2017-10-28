@@ -9,12 +9,12 @@ export class CommunityPartnersComponent implements OnInit {
 
 	partners = [
 		{
-			name: 'Google Developer Expert Medellin',
+			name: 'Google Developer Expert Medellín',
 			imgUrl: '/assets/img/gdg.png',
 			url: 'https://www.meetup.com/GDG-Medellin'
 		},
 		{
-			name: 'Angular Medellin',
+			name: 'Angular Medellín',
 			imgUrl: '/assets/img/ANGULAR_MEDELLIN.png',
 			url: 'http://angularmedellin.com/'
 		},
@@ -27,6 +27,11 @@ export class CommunityPartnersComponent implements OnInit {
 			name: 'MedellínJS',
 			imgUrl: '/assets/img/medellinjs.jpg',
 			url: 'https://www.meetup.com/medellinjs'
+		},
+		{
+			name: 'Medellín.rb',
+			imgUrl: '/assets/img/medellin-rb.jpg',
+			url: 'https://www.meetup.com/medellin-rb/'
 		}
 	];
 
