@@ -65,9 +65,6 @@ export class PurchaseformComponent implements OnInit {
 			if (itemsString.indexOf('mc') !== -1) {
 				this.attendantInformation.tickets.push(new TicketCheckout('main-conference'));
 			}
-			if (itemsString.indexOf('w1') !== -1) {
-				this.attendantInformation.tickets.push(new TicketCheckout('workshop-1' ));
-			}
 			this.calculatePurchaseTotal();
 		} else {
 			// ToDo: redirect user if no  localStorage.purchaseItems

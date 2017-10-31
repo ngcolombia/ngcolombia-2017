@@ -55,7 +55,7 @@ export class PricingComponent implements OnInit {
 	}
 
 	change(index: number) {
-		if ( index != 2 ){
+		if ( index == 1 ){
 			this.prices[index].checked = !this.prices[index].checked;
 			this.validateOnlyOneWorkshop(index);
 		}
