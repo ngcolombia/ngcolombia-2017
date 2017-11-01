@@ -61,7 +61,7 @@
 	position: relative;
 	text-align: center;
 	color: map-get($md-ngcolombia, 500);
-	@media(min-width: 769px) {
+	@media(min-width: 960px) {
 		margin-left: 90px;
 	}
 	@media(min-width: 1025px) {
