@@ -137,3 +137,12 @@ export const registrationData: EventSchedule[] = [
 		null)
 ];
 
+export const registrationDataAfternoon: EventSchedule[] = [
+	new EventSchedule(
+		'1:00 PM',
+		null,
+		'Registration',
+		null,
+		null,
+		null)
+];

@@ -15,12 +15,14 @@ export class EventScheduleComponent implements OnInit {
 	$mainConferenceSchedule: Observable<EventSchedule[]>;
 	$workshopsSchedule: Observable<EventSchedule[]>;
 	$registrationSchedule: Observable<EventSchedule[]>;
+	$registrationAfternoonSchedule: Observable<EventSchedule[]>;
 	dialogRef: MdDialogRef<EventScheduleDetailComponent>;
 
 	constructor(private service: EventScheduleService, public dialog: MdDialog) {
 		this.$mainConferenceSchedule = service.getMainConferenceSchedule();
 		this.$workshopsSchedule = service.getWorkshopsSchedule();
 		this.$registrationSchedule = service.getRegistrationSchedule();
+		this.$registrationAfternoonSchedule = service.getRegistrationAfternoonSchedule();
 	}
 
 	ngOnInit() {
