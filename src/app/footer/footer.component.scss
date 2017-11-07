@@ -19,7 +19,18 @@
     @media (min-width: 992px) {
         width:700px
     }
+	
+	&.code-of-conduct {
+		margin-top: 70px;
+		text-align: center;
+		font-size: 1.5em;
+
+		a{
+			font-weight: normal;
+		}
+	}
 }
+
 
 .social-button{
 	text-align: center;
