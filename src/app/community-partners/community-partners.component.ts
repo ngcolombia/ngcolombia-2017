@@ -32,7 +32,12 @@ export class CommunityPartnersComponent implements OnInit {
 			name: 'Medellín.rb',
 			imgUrl: '/assets/img/medellin-rb.jpg',
 			url: 'https://www.meetup.com/medellin-rb/'
-		}
+		},
+		{
+			name: 'JetBrains (licenses Sponsor)',
+			imgUrl: '/assets/img/jetbrains.png',
+			url: 'https://www.jetbrains.com/'
+		},
 	];
 
 	constructor() { }

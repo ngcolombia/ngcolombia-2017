@@ -22,9 +22,7 @@
 .partner-image img {
     position: relative;
     max-width: 335px;
-    @media (min-width: 768px){
-        max-width: 365px;
-    }
+    max-height: 187px;
 }
 
 .partner-image {
