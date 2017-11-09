@@ -1,0 +1,34 @@
+<div class="main-container">
+  <div class="layer"></div>
+    <h1 class="banner-title">Our heroes</h1>
+  
+    <div class="people-container">
+      <div class="row" *ngFor="let row of people">
+        <div class="person" *ngFor="let person of row">
+          <md-card>
+            <div class="image-container">
+              <div class="wrapper">
+                <svg height="100%" width="100%" viewBox="0 0 100 100">
+                  <polygon points="0.8 16.7, 50 0, 99.2 16.7, 92.4 78.197, 50 100, 7.6 78.197" style="fill:transparent;stroke:#FFF; stroke-width: 2px;"
+                  />
+                </svg>
+                <!-- <div class="shadow"></div> -->
+                <img class="clip-angular-logo-polygon" [src]="person.picture" [alt]="person.name">
+              </div>
+            </div>
+            <div class="content">
+              <div class="name">{{person.name}}</div>
+              <div class="phrase"> {{person.phrase}} </div>
+            </div>
+          </md-card>
+        </div>
+        <div *ngIf="row.length < 2" class="phantom-person person">
+          <md-card>
+            <div class="content">
+              <div class="phrase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatum labore porro consequuntur laborum officia!</div> </div>
+          </md-card>
+        </div>
+      </div>
+    </div>
+    <app-photographer-credit-link ChangeLinkBackground="rgba(0, 0, 0, 0.3)" authorName="Teemu Paananen" authorId="xteemu"></app-photographer-credit-link>
+  </div>

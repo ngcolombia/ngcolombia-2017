@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { PurchaseErrorComponent } from './purchase-error/purchase-error.component';
 import { PurchaseformComponent } from './purchaseform/purchaseform.component';
+import { HeroesComponent } from "./heroes/heroes.component";
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
 	{ path: 'pending', component: PaymentPendingComponent },
 	{ path: 'purchase-error', component: PurchaseErrorComponent },
 	{ path: 'confirmation', component: ConfirmationComponent },
+	{ path: 'heroes', component: HeroesComponent },
 	{ path: '**', component: MainPageComponent },
 
 ];

@@ -44,6 +44,9 @@ import { PurchaseErrorComponent } from './purchase-error/purchase-error.componen
 import { FaqComponent } from './about-us/faq/faq.component';
 import { PaymentResponseComponent } from './payment-response/payment-response.component';
 import { PaymentPendingComponent } from './payment-pending/payment-pending.component';
+import { HeroesComponent } from './heroes/heroes.component';
+
+import { ChangeLinkBackgroundDirective } from "./heroes/directives/change-link-background.directive";
 
 @NgModule({
 	declarations: [
@@ -73,7 +76,9 @@ import { PaymentPendingComponent } from './payment-pending/payment-pending.compo
 		PurchaseErrorComponent,
 		FaqComponent,
 		PaymentResponseComponent,
-		PaymentPendingComponent
+		PaymentPendingComponent,
+		HeroesComponent,
+		ChangeLinkBackgroundDirective
 	],
 	imports: [
 		MdButtonModule,
