@@ -158,5 +158,11 @@ export const heroesData = [
     picture: './assets/img/heroes/MateoCastaño.png',
     phrase:
       'He always supported our community, he helped us by being a tutor in the Workshop #1.'
+  },
+  {
+    name: "Carlos Rojas",
+    picture: "./assets/img/heroes/CarlosRojas.png",
+    phrase:
+      "He gave every NgGirls attendee a 100% off discount for his Angular course in ng-classroom. Plus another 20 for the conference!"
   }
 ];
