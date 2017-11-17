@@ -1,4 +1,4 @@
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router, NavigationEnd } from '@angular/router';
 import { MdSidenav } from '@angular/material';
 import { Component, ViewChild, HostListener, OnInit } from '@angular/core';
 
@@ -13,11 +13,17 @@ export class MainPageComponent implements OnInit {
 
 	@ViewChild(MdSidenav) sidenav: MdSidenav;
 
-	constructor(private route: ActivatedRoute) {
+	constructor(private route: ActivatedRoute, private router: Router) {
 
 	}
 
 	ngOnInit() {
+		this.router.events.subscribe((evt) => {
+			if (!(evt instanceof NavigationEnd)) {
+					return;
+			}
+			window.scrollTo(0, 0)
+	});
 	}
 
 	closeNav(selected: boolean): void {

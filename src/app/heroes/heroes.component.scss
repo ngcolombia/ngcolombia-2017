@@ -1,10 +1,24 @@
+@import '../../style/palette';
+
+.back-to-home {
+
+  .fa {
+    font-size: 1.25em;
+  }
+
+  &.bottom {
+    float: right;
+    margin-bottom: 50px;
+  }
+}
+
 .main-container{
-  padding: 70px 0;
+  padding: 130px 0 80px;;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   text-align: center;
   
   @media (max-width: 480px) {
-    padding: 50px 0 40px;
+    padding: 115px 0 40px;
   }
   
 }
@@ -25,14 +39,14 @@
   position: relative;
   z-index: 2;
   max-width: 1000px;
-  margin: 70px auto auto;
+  margin: 55px auto auto;
   
   @media (max-width: 950px) {
     padding: 0 62px;
   }
 
   @media (max-width: 480px) {
-    margin-top: 30px;
+    margin-top: 15px;
     padding: 0 15px;
   }
 }
