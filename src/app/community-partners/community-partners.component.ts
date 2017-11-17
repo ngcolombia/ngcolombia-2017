@@ -38,6 +38,11 @@ export class CommunityPartnersComponent implements OnInit {
 			imgUrl: '/assets/img/jetbrains.png',
 			url: 'https://www.jetbrains.com/'
 		},
+		{
+			name: 'Angular Colombia',
+			imgUrl: '/assets/img/angular_colombia.jpg',
+			url: 'https://www.meetup.com/Angular-Colombia/'
+		},
 	];
 
 	constructor() { }
