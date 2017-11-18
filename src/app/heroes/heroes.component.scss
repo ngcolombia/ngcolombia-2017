@@ -1,5 +1,11 @@
 @import '../../style/palette';
 
+header .back-to-home .text {
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
 .back-to-home {
 
   .fa {
